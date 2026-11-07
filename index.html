@@ -1,0 +1,1536 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="description" content="Venta y arriendo de maquinaria y camiones con estándar minero en la zona norte de Chile: excavadoras, cargadores frontales, retroexcavadoras, grúas horquilla y camiones pluma. Apoyo en financiamiento.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="LGC Asesorías Zona Norte · Maquinaria en venta y arriendo">
+<meta property="og:description" content="Venta y arriendo de maquinaria y camiones con estándar minero en la zona norte de Chile: excavadoras, cargadores frontales, retroexcavadoras, grúas horquilla y camiones pluma. Apoyo en financiamiento.">
+<meta property="og:url" content="https://meaburro01.github.io/lgc-zona-norte/"><meta property="og:image" content="https://meaburro01.github.io/lgc-zona-norte/fotos/7539760bc78d470ea52521d96ccfbf43.jpg">
+<style>body{margin:0}img{max-width:100%}</style><title>LGC Asesorías Zona Norte</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@600;700;800&family=Public+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style id="lgc-style">
+/* Layout: tres líneas de servicio con color propio — Venta (ámbar de seguridad), Arriendo (verde óxido de cobre) y Financiamiento como apoyo adicional (cobre). Catálogo en grilla por familia de equipo; ficha en diálogo. */
+:root{
+  --bg:#f2f4f3; --surface:#ffffff; --sunk:#e8edeb; --line:#d3dbd8; --fg:#132225; --muted:#56666a; --ink:#0d2a2d;
+  --brand:#0e3b3f; --on-brand:#ffffff; --brand-soft:#a9c7c4;
+  --venta:#e5a00d; --venta-ink:#2a1d00; --venta-soft:#fbefd0;
+  --arriendo:#17716f; --arriendo-ink:#ffffff; --arriendo-soft:#dceeed;
+  --fin:#b45a2a; --fin-ink:#ffffff; --fin-soft:#f6e4d9;
+  --ok:#2c7a4b; --ok-bg:#e1f1e7; --warn:#8f6400; --warn-bg:#fbefd0; --off:#6f7c80; --off-bg:#e7ecea; --danger:#b3261e;
+  --sil:#17716f;
+  --shadow:0 1px 2px rgba(13,42,45,.06),0 8px 22px rgba(13,42,45,.08);
+  --f-display:"Big Shoulders Display","Arial Narrow",Impact,sans-serif;
+  --f-body:"Public Sans",system-ui,-apple-system,"Segoe UI",Arial,sans-serif;
+  --f-data:"IBM Plex Mono",ui-monospace,"Cascadia Mono",Consolas,monospace;
+  --r:4px;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --bg:#0b1516; --surface:#122224; --sunk:#0f1c1e; --line:#24393b; --fg:#e2ecea; --muted:#9db0ae; --ink:#eaf3f1;
+  --brand:#0a2a2d; --on-brand:#ffffff; --brand-soft:#87aeaa;
+  --venta:#f0b43c; --venta-ink:#231800; --venta-soft:#382a0c;
+  --arriendo:#3fb1aa; --arriendo-ink:#06201f; --arriendo-soft:#123533;
+  --fin:#dd8a5a; --fin-ink:#2a1004; --fin-soft:#3a2216;
+  --ok:#6fcf98; --ok-bg:#133224; --warn:#e9be5a; --warn-bg:#382a0c; --off:#95a6a4; --off-bg:#1b2d2f; --danger:#f2867f;
+  --sil:#5fc2bb; --shadow:0 1px 2px rgba(0,0,0,.3),0 8px 22px rgba(0,0,0,.28); color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#0b1516; --surface:#122224; --sunk:#0f1c1e; --line:#24393b; --fg:#e2ecea; --muted:#9db0ae; --ink:#eaf3f1;
+  --brand:#0a2a2d; --on-brand:#ffffff; --brand-soft:#87aeaa;
+  --venta:#f0b43c; --venta-ink:#231800; --venta-soft:#382a0c;
+  --arriendo:#3fb1aa; --arriendo-ink:#06201f; --arriendo-soft:#123533;
+  --fin:#dd8a5a; --fin-ink:#2a1004; --fin-soft:#3a2216;
+  --ok:#6fcf98; --ok-bg:#133224; --warn:#e9be5a; --warn-bg:#382a0c; --off:#95a6a4; --off-bg:#1b2d2f; --danger:#f2867f;
+  --sil:#5fc2bb; --shadow:0 1px 2px rgba(0,0,0,.3),0 8px 22px rgba(0,0,0,.28); color-scheme:dark}
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--fg);font-family:var(--f-body);font-size:15px;line-height:1.55}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:10;background:var(--brand)}
+.wrap{max-width:1200px;margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+h1,h2,h3{font-family:var(--f-display);text-wrap:balance;margin:0;line-height:1.02;letter-spacing:.005em}
+button,input,select,textarea{font:inherit;color:inherit}
+a{color:inherit}
+:focus-visible{outline:2px solid var(--venta);outline-offset:2px}
+.mono{font-family:var(--f-data);font-variant-numeric:tabular-nums}
+.label{font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);font-weight:600}
+
+/* barra */
+.bar{background:var(--brand);color:var(--on-brand);position:sticky;top:env(safe-area-inset-top,0px);z-index:5}
+.bar .wrap{display:flex;align-items:center;gap:18px;padding-block:10px;flex-wrap:wrap}
+.brand{display:flex;align-items:center;gap:10px;margin-right:auto;text-decoration:none}
+.mark{min-width:34px;height:34px;padding:0 6px;display:grid;place-items:center;background:var(--venta);color:var(--venta-ink);font-family:var(--f-display);font-weight:800;font-size:18px;border-radius:3px}
+.brand b{font-family:var(--f-display);font-size:26px;font-weight:800;letter-spacing:.02em;text-transform:uppercase}
+.brand small{display:block;font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--brand-soft);margin-top:-2px}
+.nav{display:flex;gap:2px;flex-wrap:wrap}
+.nav a{color:#e3efed;text-decoration:none;padding:7px 10px;font-weight:500;font-size:14px;border-bottom:2px solid transparent}
+.nav a:hover{color:#fff;border-bottom-color:var(--venta)}
+
+/* hero + líneas */
+.hero{padding-block:30px 8px}
+.hero h1{font-size:clamp(34px,5vw,60px);font-weight:800;color:var(--ink);text-transform:uppercase;max-width:20ch}
+.hero p{color:var(--muted);max-width:62ch;margin:12px 0 0;font-size:16px}
+.lines{display:grid;grid-template-columns:minmax(0,1.2fr) minmax(0,1.2fr) minmax(0,1fr);gap:12px;margin-top:22px}
+.line{display:flex;flex-direction:column;gap:6px;text-decoration:none;padding:16px 18px;border-radius:var(--r);min-height:132px;position:relative;overflow:hidden}
+.line h2{font-size:30px;font-weight:800;text-transform:uppercase}
+.hero .line p{margin:0;font-size:14px;color:inherit;opacity:.9;max-width:none}
+.line .n{font-family:var(--f-data);font-size:13px;margin-top:auto}
+.line.venta{background:var(--venta);color:var(--venta-ink)}
+.line.arriendo{background:var(--arriendo);color:var(--arriendo-ink)}
+.line.fin{background:var(--surface);color:var(--fg);border:1.5px dashed var(--fin)}
+.line.fin h2{color:var(--fin)}
+.line .tag{align-self:flex-start;font-size:10.5px;letter-spacing:.1em;text-transform:uppercase;font-weight:700;padding:2px 7px;border-radius:2px;background:var(--fin-soft);color:var(--fin)}
+.line:hover{filter:brightness(1.03)}
+
+/* secciones */
+.section{padding-block:30px 10px}
+.sec-head{display:flex;align-items:flex-end;justify-content:space-between;gap:12px;flex-wrap:wrap;margin-bottom:14px;padding-bottom:10px;border-bottom:3px solid var(--line)}
+.sec-head h2{font-size:clamp(30px,3.6vw,42px);font-weight:800;text-transform:uppercase;color:var(--ink)}
+.sec-head .kicker{display:block;font-size:12px;letter-spacing:.12em;text-transform:uppercase;font-weight:700;margin-bottom:2px}
+#venta .sec-head{border-bottom-color:var(--venta)} #venta .kicker{color:var(--warn)}
+#arriendo .sec-head{border-bottom-color:var(--arriendo)} #arriendo .kicker{color:var(--arriendo)}
+#financiamiento .sec-head{border-bottom-color:var(--fin)} #financiamiento .kicker{color:var(--fin)}
+.filters{display:flex;flex-wrap:wrap;gap:8px;align-items:center}
+.fam{border:1px solid var(--line);background:var(--surface);border-radius:999px;padding:6px 13px;cursor:pointer;font-size:13.5px;font-weight:500}
+.fam[aria-pressed="true"]{background:var(--ink);color:var(--bg);border-color:var(--ink)}
+.fam .c{font-family:var(--f-data);font-size:12px;opacity:.7;margin-left:4px}
+.filters input{border:1px solid var(--line);background:var(--surface);border-radius:var(--r);padding:7px 10px;min-width:0;flex:1 1 200px;max-width:320px;margin-left:auto}
+.result-n{color:var(--muted);font-size:13px}
+
+/* tarjetas */
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(270px,1fr));gap:16px;margin-top:16px}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:var(--r);overflow:hidden;display:flex;flex-direction:column;cursor:pointer;text-align:left;padding:0;transition:transform .15s ease,box-shadow .15s ease}
+.card:hover{transform:translateY(-2px);box-shadow:var(--shadow)}
+.ph{position:relative;aspect-ratio:4/3;max-width:100%;background:var(--sunk);display:flex;align-items:center;justify-content:center;overflow:hidden}
+.ph img{width:100%;height:100%;object-fit:cover;display:block}
+.ph svg{width:70%;height:auto;color:var(--sil);opacity:.9}
+.ph .tags{position:absolute;top:8px;left:8px;display:flex;gap:6px;flex-wrap:wrap}
+.ph .nfot{position:absolute;bottom:8px;right:8px;background:rgba(10,20,22,.72);color:#fff;font-family:var(--f-data);font-size:11px;padding:2px 7px;border-radius:2px}
+.pill{font-size:10.5px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;padding:3px 8px;border-radius:2px;background:var(--surface);color:var(--fg);border:1px solid var(--line)}
+.pill.arr{background:var(--arriendo);color:var(--arriendo-ink);border-color:var(--arriendo)}
+.pill.ven{background:var(--venta);color:var(--venta-ink);border-color:var(--venta)}
+.pill.ok{background:var(--ok-bg);color:var(--ok);border-color:transparent}
+.pill.warn{background:var(--warn-bg);color:var(--warn);border-color:transparent}
+.pill.off{background:var(--off-bg);color:var(--off);border-color:transparent}
+.cb{padding:12px 14px 14px;display:flex;flex-direction:column;gap:8px;flex:1}
+.cb .top{display:flex;justify-content:space-between;gap:8px;align-items:center}
+.cb .code{font-family:var(--f-data);font-size:11.5px;color:var(--muted)}
+.cb .tipo{font-size:11.5px;letter-spacing:.09em;text-transform:uppercase;font-weight:700;color:var(--muted)}
+.cb h3{font-size:25px;font-weight:700;color:var(--ink)}
+.facts{display:grid;grid-template-columns:minmax(0,.75fr) minmax(0,1.1fr) minmax(0,1.35fr);gap:1px;background:var(--line);border:1px solid var(--line);border-radius:var(--r);overflow:hidden}
+.facts div{background:var(--surface);padding:5px 8px;min-width:0}
+.facts span{display:block;font-size:10px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);font-weight:600}
+.facts b{display:block;font-family:var(--f-data);font-weight:500;font-size:12px;overflow-wrap:break-word}
+.price{margin-top:auto;display:flex;align-items:baseline;justify-content:space-between;gap:8px;flex-wrap:wrap;padding-top:6px}
+.price strong{font-family:var(--f-data);font-size:19px;font-weight:500;color:var(--ink)}
+.price small{font-size:12px;color:var(--muted)}
+.finlink{font-size:12.5px;color:var(--fin);font-weight:600;display:flex;align-items:center;gap:6px}
+.finlink::before{content:"";width:8px;height:8px;border:2px solid var(--fin);border-radius:50%}
+.empty{border:1.5px dashed var(--line);border-radius:var(--r);padding:22px;background:var(--surface);margin-top:16px;display:grid;grid-template-columns:minmax(0,1.4fr) minmax(0,1fr);gap:18px;align-items:center}
+.empty h3{font-size:26px;text-transform:uppercase;color:var(--ink);margin-bottom:6px}
+.empty p{margin:0;color:var(--muted)}
+.want{display:flex;flex-wrap:wrap;gap:6px}
+.want span{font-size:13px;padding:4px 10px;border-radius:999px;background:var(--arriendo-soft);color:var(--arriendo);font-weight:500}
+
+/* diálogo ficha */
+dialog{border:0;padding:0;border-radius:6px;width:min(1040px,calc(100vw - 24px));max-height:calc(100vh - 24px);background:var(--surface);color:var(--fg);box-shadow:0 20px 60px rgba(0,0,0,.35)}
+dialog::backdrop{background:rgba(6,16,18,.6)}
+.dlg-head{display:flex;align-items:center;gap:10px;padding:12px 16px;border-bottom:1px solid var(--line);position:sticky;top:0;background:var(--surface);z-index:2;flex-wrap:wrap}
+.dlg-head h3{font-size:28px;margin-right:auto;color:var(--ink);font-weight:700}
+.x{border:1px solid var(--line);background:var(--sunk);border-radius:var(--r);width:36px;height:36px;cursor:pointer;font-size:18px;line-height:1}
+.dlg-body{padding:16px;display:grid;grid-template-columns:minmax(0,1.2fr) minmax(0,1fr);gap:22px}
+.gal .main{aspect-ratio:4/3;max-width:100%;border-radius:var(--r);overflow:hidden;background:var(--sunk);display:flex;align-items:center;justify-content:center}
+.gal .main img{width:100%;height:100%;object-fit:contain}
+.gal .main svg{width:70%;color:var(--sil)}
+.thumbs{display:flex;gap:6px;margin-top:8px;flex-wrap:wrap}
+.thumbs button{width:70px;height:52px;padding:0;border:1px solid var(--line);border-radius:3px;overflow:hidden;cursor:pointer;background:var(--sunk)}
+.thumbs button[aria-current="true"]{outline:2px solid var(--venta);outline-offset:1px}
+.thumbs img{width:100%;height:100%;object-fit:cover}
+.plate{border:1.5px solid var(--ink);border-radius:3px;background:var(--surface);position:relative;padding:12px 14px 6px}
+.plate::before,.plate::after{content:"";position:absolute;top:7px;width:7px;height:7px;border-radius:50%;background:var(--sunk);box-shadow:inset 0 0 0 1.5px var(--muted)}
+.plate::before{left:7px}.plate::after{right:7px}
+.plate-t{font-family:var(--f-display);font-size:15px;letter-spacing:.16em;text-transform:uppercase;color:var(--ink);text-align:center;margin-bottom:4px;font-weight:700}
+.spec{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.3fr);gap:0 12px;font-size:13.5px;margin:0}
+.spec dt{color:var(--muted);padding:5px 0;border-top:1px solid var(--line)}
+.spec dd{margin:0;font-family:var(--f-data);text-align:right;padding:5px 0;border-top:1px solid var(--line);overflow-wrap:anywhere}
+.buybox{margin-top:14px;padding:12px 14px;border-radius:var(--r);background:var(--venta-soft);display:flex;justify-content:space-between;align-items:baseline;gap:10px;flex-wrap:wrap}
+.buybox.arr{background:var(--arriendo-soft)}
+.buybox strong{font-family:var(--f-data);font-size:24px;font-weight:500;color:var(--ink)}
+.verif{font-size:12.5px;color:var(--muted);border-left:3px solid var(--line);padding:4px 10px;margin-top:12px}
+.advice{background:var(--fin-soft);border-left:3px solid var(--fin);padding:10px 12px;font-size:14px;margin-top:12px;border-radius:0 var(--r) var(--r) 0}
+.advice .label{color:var(--fin)}
+.actions{display:flex;flex-wrap:wrap;gap:8px;margin-top:14px}
+.btn{border:1px solid var(--ink);background:var(--ink);color:var(--bg);border-radius:var(--r);padding:10px 15px;font-weight:600;cursor:pointer;font-size:14px}
+.btn.wa{background:#1d7a46;border-color:#1d7a46;color:#fff;text-decoration:none;display:inline-block}
+.wa-float{position:fixed;right:16px;bottom:16px;z-index:20;background:#1d7a46;color:#fff;font-weight:700;font-size:14px;padding:11px 16px;border-radius:999px;text-decoration:none;box-shadow:0 4px 14px rgba(0,0,0,.25)}
+@media print{.wa-float{display:none}}
+.btn.venta{background:var(--venta);border-color:var(--venta);color:var(--venta-ink)}
+.btn.arr{background:var(--arriendo);border-color:var(--arriendo);color:var(--arriendo-ink)}
+.btn.fin{background:transparent;border-color:var(--fin);color:var(--fin)}
+.btn.danger{background:transparent;color:var(--danger);border-color:var(--danger)}
+.btn:disabled{opacity:.5;cursor:not-allowed}
+.desc{font-size:14.5px;margin:12px 0 0;white-space:pre-line}
+.checks{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:4px 12px;margin:8px 0 0;padding:0;list-style:none;font-size:13.5px}
+.checks li::before{content:"✓ ";color:var(--ok);font-weight:700}
+
+/* financiamiento */
+.finwrap{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.1fr);gap:18px}
+.finpitch{background:var(--surface);border:1px solid var(--line);border-top:4px solid var(--fin);border-radius:var(--r);padding:18px}
+.finpitch h3{font-size:28px;color:var(--ink);text-transform:uppercase;margin-bottom:6px}
+.finpitch ul{margin:10px 0 0;padding:0;list-style:none;display:grid;gap:8px}
+.finpitch li{display:grid;grid-template-columns:auto minmax(0,1fr);gap:10px;font-size:14.5px}
+.finpitch li b{display:block}
+.finpitch li i{width:10px;height:10px;margin-top:6px;border-radius:50%;background:var(--fin)}
+.flow{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px;margin:14px 0 0;padding:0;list-style:none;counter-reset:f}
+.flow li{font-size:13px;background:var(--sunk);padding:10px;border-radius:var(--r)}
+.flow li::before{counter-increment:f;content:"Paso " counter(f);display:block;font-family:var(--f-data);font-size:11px;color:var(--fin);margin-bottom:3px}
+details.cmp{margin-top:14px;border:1px solid var(--line);border-radius:var(--r);background:var(--surface)}
+details.cmp summary{cursor:pointer;padding:10px 14px;font-weight:600}
+.cmp-wrap{overflow-x:auto}
+table.t{border-collapse:collapse;width:100%;min-width:600px;font-size:13.5px}
+.t th,.t td{padding:8px 12px;border-top:1px solid var(--line);text-align:left;vertical-align:top}
+.t thead th{font-family:var(--f-display);font-size:17px;letter-spacing:.03em;text-transform:uppercase}
+.t tbody th{color:var(--muted);font-weight:500;width:22%}
+.panel{background:var(--surface);border:1px solid var(--line);border-radius:var(--r);padding:16px}
+.form{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px 12px}
+.form .full{grid-column:1/-1}
+.field{display:flex;flex-direction:column;gap:4px;min-width:0}
+.field label{font-size:12.5px;font-weight:600;color:var(--muted)}
+.field input,.field select,.field textarea{border:1px solid var(--line);background:var(--sunk);border-radius:var(--r);padding:8px 10px;width:100%;min-width:0}
+.field textarea{min-height:84px;resize:vertical}
+.out{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:1px;background:var(--line);border:1px solid var(--line);border-radius:var(--r);overflow:hidden;margin-top:14px}
+.out div{background:var(--surface);padding:10px 12px}
+.out strong{display:block;font-family:var(--f-data);font-size:18px;font-weight:500}
+.out .big{grid-column:1/-1;background:var(--fin);color:var(--fin-ink)}
+.out .big .label{color:var(--fin-ink);opacity:.85}
+.out .big strong{font-size:30px}
+.note{font-size:12.5px;color:var(--muted);margin-top:10px}
+
+/* contacto */
+.contact{display:grid;grid-template-columns:minmax(0,1.35fr) minmax(0,1fr);gap:16px}
+.addr{font-family:var(--f-data);font-size:16px;user-select:all;overflow-wrap:anywhere}
+.copy{border:1px solid var(--line);background:var(--sunk);border-radius:var(--r);padding:4px 10px;cursor:pointer;font-size:12.5px;margin-left:6px}
+.msgbox{white-space:pre-wrap;font-family:var(--f-data);font-size:12.5px;background:var(--sunk);border:1px solid var(--line);border-radius:var(--r);padding:10px;margin-top:10px;user-select:all}
+.toast{position:fixed;left:50%;transform:translateX(-50%);bottom:calc(16px + env(safe-area-inset-bottom,0px));background:var(--ink);color:var(--bg);padding:10px 16px;border-radius:6px;font-size:14px;z-index:50;box-shadow:var(--shadow)}
+
+/* gestión */
+.admin{border:1px solid var(--line);border-top:4px solid var(--ink);background:var(--surface);border-radius:var(--r);padding:16px}
+.adm-scroll{overflow-x:auto;border:1px solid var(--line);border-radius:var(--r)}
+.adm-table{width:100%;border-collapse:collapse;font-size:13.5px;min-width:760px}
+.adm-table th,.adm-table td{padding:8px 10px;border-bottom:1px solid var(--line);text-align:left}
+.adm-table th{font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+.row-actions{display:flex;gap:6px;flex-wrap:wrap}
+.mini{border:1px solid var(--line);background:var(--sunk);border-radius:var(--r);padding:4px 9px;cursor:pointer;font-size:12.5px}
+.ed-photos{display:flex;gap:8px;flex-wrap:wrap}
+.ed-photos figure{margin:0;width:110px;border:1px solid var(--line);border-radius:3px;overflow:hidden;background:var(--sunk);font-size:11px}
+.ed-photos img{width:100%;height:76px;object-fit:cover;display:block}
+.ed-photos figcaption{display:flex;justify-content:space-between;padding:3px 4px;gap:2px}
+.ed-photos figcaption button{border:0;background:none;cursor:pointer;color:var(--muted);font-size:11px;padding:2px}
+.chk-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:4px 10px;font-size:13.5px}
+.chk-grid label{display:flex;gap:6px;align-items:center;font-weight:400;color:var(--fg)}
+.confirm{display:flex;gap:8px;align-items:center;flex-wrap:wrap;background:var(--warn-bg);color:var(--warn);padding:8px 10px;border-radius:var(--r);font-size:13.5px;margin-bottom:10px}
+footer{padding-block:26px 30px;color:var(--muted);font-size:13px;border-top:1px solid var(--line);margin-top:30px}
+
+@media (max-width:900px){
+  .lines,.dlg-body,.finwrap,.contact,.empty{grid-template-columns:minmax(0,1fr)}
+  .chk-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+}
+@media (max-width:520px){
+  .form,.checks,.out,.flow{grid-template-columns:minmax(0,1fr)}
+  .brand small{display:none}
+  .filters input{max-width:none;margin-left:0}
+  .line{min-height:0}
+}
+@media (prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}}
+</style>
+<div id="app"></div>
+<script type="application/json" id="lgc-data">{
+"config": {
+"correo": "contacto@lgcasesorias.cl",
+"telefono": "+56 9 4509 3907",
+"whatsapp": "+56 9 4509 3907",
+"horario": "Lunes a viernes, 9:00 a 18:00",
+"zona": "Arica, Iquique, Antofagasta, Calama y Copiapó"
+},
+"equipos": [
+{
+"id": "exc-m03",
+"codigo": "LGC-EQ-001",
+"tipo": "Excavadora",
+"marca": "Volvo",
+"modelo": "EC210DL",
+"anio": 2022,
+"modalidad": "Venta",
+"estado": "Disponible",
+"horometro": 7950,
+"kilometraje": null,
+"ubicacion": "Antofagasta",
+"patente": "",
+"serie": "VCEC210DA00240642",
+"potencia": "165 HP · motor Volvo",
+"peso": "21.110 kg",
+"capacidad": "Balde 1,25 m³ (rango 1,01 a 2,00 m³)",
+"combustible": "Diésel",
+"traccion": "Orugas, tren largo",
+"operador": "",
+"arriendoValor": null,
+"arriendoUnidad": "mes",
+"ventaValor": 80000000,
+"iva": "+ IVA",
+"estandar": [],
+"extras": [
+[
+"Pluma / brazo",
+"5,7 m / 2,9 m"
+],
+[
+"Profundidad máx. de excavación",
+"6,73 m"
+],
+[
+"Dimensiones (L × A × H)",
+"9,69 × 2,80 × 2,93 m"
+],
+[
+"Zapatas",
+"600 mm"
+],
+[
+"Velocidades de traslado",
+"5,8 y 3,6 km/h"
+],
+[
+"Estanque",
+"375 L"
+],
+[
+"Aire acondicionado",
+"Sí"
+],
+[
+"FOPS / ROPS",
+"Sí / No (según información entregada)"
+],
+[
+"Tercera función",
+"Sí"
+],
+[
+"N.º de motor",
+"12794411"
+],
+[
+"Identificación interna",
+"M-03"
+]
+],
+"descripcion": "Excavadora hidráulica sobre orugas, clase 21 t, para excavación, zanjas, conformación de plataformas y carguío de áridos. Hay una segunda unidad gemela (LGC-EQ-002).",
+"verificacion": "Horómetro y especificaciones informados por el propietario, con respaldo fotográfico y certificado de inscripción vigente (09-06-2026). La lista del vendedor indica año 2023; el certificado registral indica 2022. Sujeto a inspección presencial.",
+"asesoria": "Al ser dos unidades gemelas, se puede negociar la compra de ambas. Recomendamos inspección mecánica y revisión del historial de mantenciones antes de cerrar. Equipo financiable con leasing o crédito a 36–48 meses.",
+"fotos": [
+"7539760bc78d470ea52521d96ccfbf43",
+"d2a98b8616f2d90d4d90b878ac737663",
+"09b4926f86674ff18d3423b91870404e",
+"44e4cef258ca34a56e733e718fa640da",
+"80f53677ffac1ad6fac867da136647b3"
+]
+},
+{
+"id": "exc-m04",
+"codigo": "LGC-EQ-002",
+"tipo": "Excavadora",
+"marca": "Volvo",
+"modelo": "EC210DL",
+"anio": 2022,
+"modalidad": "Venta",
+"estado": "Disponible",
+"horometro": 8032.5,
+"kilometraje": null,
+"ubicacion": "Antofagasta",
+"patente": "",
+"serie": "VCEC210DT00240647",
+"potencia": "165 HP · motor Volvo",
+"peso": "21.110 kg",
+"capacidad": "Balde 1,25 m³ (rango 1,01 a 2,00 m³)",
+"combustible": "Diésel",
+"traccion": "Orugas, tren largo",
+"operador": "",
+"arriendoValor": null,
+"arriendoUnidad": "mes",
+"ventaValor": 80000000,
+"iva": "+ IVA",
+"estandar": [],
+"extras": [
+[
+"Pluma / brazo",
+"5,7 m / 2,9 m"
+],
+[
+"Profundidad máx. de excavación",
+"6,73 m"
+],
+[
+"Dimensiones (L × A × H)",
+"9,69 × 2,80 × 2,93 m"
+],
+[
+"Zapatas",
+"600 mm"
+],
+[
+"Velocidades de traslado",
+"5,8 y 3,6 km/h"
+],
+[
+"Estanque",
+"375 L"
+],
+[
+"Aire acondicionado",
+"Sí"
+],
+[
+"FOPS / ROPS",
+"Sí / No (según información entregada)"
+],
+[
+"Tercera función",
+"Sí"
+],
+[
+"N.º de motor",
+"12794416"
+],
+[
+"Identificación interna",
+"M-04"
+]
+],
+"descripcion": "Excavadora hidráulica sobre orugas, clase 21 t, gemela de LGC-EQ-001. Apta para excavación, zanjas, plataformas y carguío de áridos.",
+"verificacion": "Horómetro y especificaciones informados por el propietario, con respaldo fotográfico y certificado de inscripción vigente (09-06-2026). La lista del vendedor indica año 2023; el certificado registral indica 2022. Sujeto a inspección presencial.",
+"asesoria": "Compra conjunta posible con LGC-EQ-001. Recomendamos inspección y revisión de mantenciones. Financiable con leasing o crédito.",
+"fotos": [
+"62e55d5c4f07691e21dcefd35d433224",
+"668ba60f039ec3dbc4c7637a17ad5b50",
+"a538d8c31591b29039c0530206e4e8f7",
+"716000100ef9aa510d319905401cfd57",
+"03edffa9097979f6bf368d79d8b73923"
+]
+},
+{
+"id": "exc-sany",
+"codigo": "LGC-EQ-003",
+"tipo": "Excavadora",
+"marca": "SANY",
+"modelo": "SY215LC",
+"anio": 2023,
+"modalidad": "Venta",
+"estado": "Disponible",
+"horometro": 3660,
+"kilometraje": null,
+"ubicacion": "Antofagasta",
+"patente": "",
+"serie": "",
+"potencia": "",
+"peso": "≈ 23.500 kg (referencial)",
+"capacidad": "",
+"combustible": "Diésel",
+"traccion": "Orugas, tren largo",
+"operador": "",
+"arriendoValor": null,
+"arriendoUnidad": "mes",
+"ventaValor": 73000000,
+"iva": "IVA por confirmar",
+"estandar": [],
+"extras": [],
+"descripcion": "Excavadora sobre orugas de tren largo, la de menor uso del lote (3.660 h).",
+"verificacion": "Año y horómetro informados por el vendedor; datos técnicos referenciales sujetos a validación.",
+"asesoria": "Buena relación horas/precio dentro del lote. Conviene verificar disponibilidad de repuestos y servicio técnico SANY en la zona.",
+"fotos": [
+"03c8e846ec767888b5a63fed48c27278"
+]
+},
+{
+"id": "carg-m02",
+"codigo": "LGC-EQ-004",
+"tipo": "Cargador frontal",
+"marca": "Volvo",
+"modelo": "L110F",
+"anio": 2023,
+"modalidad": "Venta",
+"estado": "Disponible",
+"horometro": 11729,
+"kilometraje": null,
+"ubicacion": "Antofagasta",
+"patente": "",
+"serie": "",
+"potencia": "≈ 228 HP brutos (referencial)",
+"peso": "",
+"capacidad": "",
+"combustible": "Diésel",
+"traccion": "Articulado",
+"operador": "",
+"arriendoValor": null,
+"arriendoUnidad": "mes",
+"ventaValor": 120000000,
+"iva": "IVA por confirmar",
+"estandar": [],
+"extras": [
+[
+"Identificación interna",
+"M02"
+]
+],
+"descripcion": "Cargador frontal articulado para alimentación de planta, carguío de camiones y manejo de acopios. Hay una segunda unidad (LGC-EQ-005).",
+"verificacion": "Año y horómetro informados por el vendedor; fotos referenciales del modelo. Sujeto a inspección.",
+"asesoria": "Equipo de alto uso: pedir historial de overhaul de motor y transmisión antes de cerrar. Financiable con leasing.",
+"fotos": [
+"8b785d9cd4baffd63850b8e8ed2641ef",
+"bda97b0b1862f2168e0cd86543aae04d"
+]
+},
+{
+"id": "carg-m01",
+"codigo": "LGC-EQ-005",
+"tipo": "Cargador frontal",
+"marca": "Volvo",
+"modelo": "L110F",
+"anio": 2023,
+"modalidad": "Venta",
+"estado": "Disponible",
+"horometro": 10211,
+"kilometraje": null,
+"ubicacion": "Antofagasta",
+"patente": "",
+"serie": "",
+"potencia": "≈ 228 HP brutos (referencial)",
+"peso": "",
+"capacidad": "",
+"combustible": "Diésel",
+"traccion": "Articulado",
+"operador": "",
+"arriendoValor": null,
+"arriendoUnidad": "mes",
+"ventaValor": 120000000,
+"iva": "IVA por confirmar",
+"estandar": [],
+"extras": [
+[
+"Identificación interna",
+"M01"
+]
+],
+"descripcion": "Cargador frontal articulado para alimentación de planta, carguío de camiones y manejo de acopios.",
+"verificacion": "Año y horómetro informados por el vendedor; fotos referenciales del modelo. Sujeto a inspección.",
+"asesoria": "Menos horas que LGC-EQ-004 al mismo precio. Pedir historial de mantenciones mayores.",
+"fotos": [
+"bda97b0b1862f2168e0cd86543aae04d",
+"8b785d9cd4baffd63850b8e8ed2641ef"
+]
+},
+{
+"id": "carg-sany",
+"codigo": "LGC-EQ-006",
+"tipo": "Cargador frontal",
+"marca": "SANY",
+"modelo": "SW936K1",
+"anio": 2023,
+"modalidad": "Venta",
+"estado": "Disponible",
+"horometro": 1896,
+"kilometraje": null,
+"ubicacion": "Antofagasta",
+"patente": "",
+"serie": "",
+"potencia": "",
+"peso": "",
+"capacidad": "Balde ≈ 2,0 m³ (referencial)",
+"combustible": "Diésel",
+"traccion": "Articulado, compacto",
+"operador": "",
+"arriendoValor": null,
+"arriendoUnidad": "mes",
+"ventaValor": 68000000,
+"iva": "IVA por confirmar",
+"estandar": [],
+"extras": [],
+"descripcion": "Cargador frontal compacto con bajo uso (1.896 h).",
+"verificacion": "Año y horómetro informados por el vendedor; datos técnicos referenciales.",
+"asesoria": "Opción de menor inversión del lote; atractivo para crédito a 24–36 meses.",
+"fotos": [
+"fa9ea25b02400a18c7f381b90a9706fc"
+]
+},
+{
+"id": "chanc",
+"codigo": "LGC-EQ-007",
+"tipo": "Planta chancadora",
+"marca": "Planta primaria",
+"modelo": "+ chancador de cono",
+"anio": 2023,
+"modalidad": "Venta",
+"estado": "Disponible",
+"horometro": 400,
+"kilometraje": null,
+"ubicacion": "Antofagasta",
+"patente": "",
+"serie": "",
+"potencia": "",
+"peso": "",
+"capacidad": "",
+"combustible": "",
+"traccion": "",
+"operador": "",
+"arriendoValor": null,
+"arriendoUnidad": "mes",
+"ventaValor": 450000000,
+"iva": "IVA por confirmar",
+"estandar": [],
+"extras": [
+[
+"Incluye",
+"Generador eléctrico 340 kVA"
+],
+[
+"Incluye",
+"Contenedor 20 pies, sala eléctrica"
+]
+],
+"descripcion": "Circuito de reducción y clasificación de roca y grava para producir áridos chancados y bases. Se vende como conjunto con su generador de 340 kVA y la sala eléctrica en contenedor.",
+"verificacion": "Horómetro (400 h) y año informados por el vendedor. El generador y la sala eléctrica no tienen precio independiente.",
+"asesoria": "Activo de alto valor: conviene evaluar leasing financiero y una inspección técnica independiente de la planta.",
+"fotos": [
+"ddf6624b40538d31c569627b000dc8ee",
+"9a2ade38fd440a7cb765ed1340e5cebe",
+"54b5f9ef4eedf6c4294c6eb444201d8a",
+"daca393dff8eb9449b64ae3935b97719"
+]
+},
+{
+"id": "selec",
+"codigo": "LGC-EQ-008",
+"tipo": "Seleccionadora",
+"marca": "Sandvik",
+"modelo": "QA451 Doublescreen",
+"anio": 2023,
+"modalidad": "Venta",
+"estado": "Disponible",
+"horometro": 5470,
+"kilometraje": null,
+"ubicacion": "Antofagasta",
+"patente": "",
+"serie": "",
+"potencia": "",
+"peso": "",
+"capacidad": "",
+"combustible": "",
+"traccion": "Móvil",
+"operador": "",
+"arriendoValor": null,
+"arriendoUnidad": "mes",
+"ventaValor": 195000000,
+"iva": "IVA por confirmar",
+"estandar": [],
+"extras": [],
+"descripcion": "Seleccionadora móvil de doble harnero para clasificación de áridos.",
+"verificacion": "Año y horómetro informados por el vendedor.",
+"asesoria": "Complementa la planta LGC-EQ-007; se puede evaluar una compra conjunta con financiamiento.",
+"fotos": [
+"feecb71c240700163038130afc651a30"
+]
+},
+{
+"id": "pluma73",
+"codigo": "LGC-EQ-009",
+"tipo": "Camión pluma",
+"marca": "Volkswagen",
+"modelo": "Constellation 32.360 + grúa Fassi F315B.2.25",
+"anio": 2023,
+"modalidad": "Venta",
+"estado": "Disponible",
+"horometro": null,
+"kilometraje": 69400,
+"ubicacion": "Antofagasta",
+"patente": "",
+"serie": "Grúa 3105-0018",
+"potencia": "360 CV · Cummins ISL 360 8,9 L",
+"peso": "",
+"capacidad": "Grúa: 10.500 kg a 2,50 m · alcance 14,40 m",
+"combustible": "Diésel",
+"traccion": "6×4",
+"operador": "",
+"arriendoValor": null,
+"arriendoUnidad": "mes",
+"ventaValor": 150000000,
+"iva": "Tratamiento tributario por confirmar",
+"estandar": [],
+"extras": [
+[
+"Torque",
+"≈ 1.600 Nm"
+],
+[
+"Transmisión",
+"V-Tronic 16 + 2 reversa"
+],
+[
+"Grúa",
+"Fassi F315B.2.25 E-Dynamic (Italia)"
+],
+[
+"Año grúa",
+"2022"
+],
+[
+"Horómetro grúa",
+"1.432 h"
+],
+[
+"Momento máximo",
+"285 kNm ≈ 29,06 tm"
+],
+[
+"Rotación",
+"400°"
+],
+[
+"Presión de trabajo",
+"32,5 MPa / 325 bar"
+]
+],
+"descripcion": "Camión 6×4 con grúa hidráulica articulada, para transporte, descarga y posicionamiento de prefabricados, cámaras y barreras. Camión y grúa se venden como una sola unidad.",
+"verificacion": "Kilometraje, horómetro y ficha técnica según documentación del vendedor. Las capacidades de la grúa varían según radio y configuración: verificar el diagrama de carga.",
+"asesoria": "Unidad muy demandada en la zona. Para compra con leasing, la grúa y el camión se financian juntos como un solo bien.",
+"fotos": [
+"f9b6341f2d605e22bbf57e18121ede3f",
+"51e8a330426817d478fba2c6c03c58e4",
+"f985ea73fd82f4545bfca03ee88599b4",
+"24249408e67fadc6897e6ac76e256fdf",
+"709be3f987087e5103a08ccaafa44b30",
+"7a16033767168efd21509ba9d958f8d1",
+"eac74e26336f667116e2f4d0eead5a9a"
+]
+},
+{
+"id": "tolva3938",
+"codigo": "LGC-EQ-010",
+"tipo": "Camión tolva",
+"marca": "Foton",
+"modelo": "Auman 3938",
+"anio": 2023,
+"modalidad": "Venta",
+"estado": "Disponible",
+"horometro": null,
+"kilometraje": 63775,
+"ubicacion": "Antofagasta",
+"patente": "",
+"serie": "",
+"potencia": "",
+"peso": "",
+"capacidad": "Tolva ≈ 14 m³ (referencial)",
+"combustible": "Diésel",
+"traccion": "",
+"operador": "",
+"arriendoValor": null,
+"arriendoUnidad": "mes",
+"ventaValor": 65000000,
+"iva": "IVA por confirmar",
+"estandar": [],
+"extras": [],
+"descripcion": "Camión tolva para transporte de áridos a granel.",
+"verificacion": "Año y kilometraje informados por el vendedor.",
+"asesoria": "Financiable con crédito automotriz o leasing; revisar revisión técnica y permiso de circulación vigentes.",
+"fotos": [
+"fee2fd2b005ff5cfbff976592fba6913"
+]
+},
+{
+"id": "arr-liugong",
+"codigo": "LGC-EQ-011",
+"tipo": "Excavadora",
+"marca": "LiuGong",
+"modelo": "CLG933F",
+"anio": 2026,
+"modalidad": "Arriendo",
+"estado": "Disponible",
+"horometro": null,
+"kilometraje": null,
+"ubicacion": "Calama",
+"patente": "",
+"serie": "",
+"potencia": "",
+"peso": "",
+"capacidad": "Clase 33 t",
+"combustible": "",
+"traccion": "",
+"operador": "Con o sin operador",
+"arriendoValor": null,
+"arriendoUnidad": "mes",
+"ventaValor": null,
+"iva": "+ IVA",
+"estandar": [],
+"extras": [
+[
+"Disponibilidad",
+"Inmediata"
+]
+],
+"descripcion": "Excavadora sobre orugas de 33 toneladas, modelo 2026, para excavación masiva, zanjas profundas y carguío.",
+"verificacion": "Datos informados por el propietario (tabla de flota, octubre 2026); sujetos a confirmación al cotizar.",
+"asesoria": "Equipo nuevo y de gran tamaño: ideal para proyectos de movimiento de tierra en faena. Arriendo mensual o por proyecto.",
+"fotos": [
+"3b44511f8199e8303b1fc05f4398b060",
+"c959684fc35e283511255ff3aadb10f2"
+]
+},
+{
+"id": "arr-heli-5t",
+"codigo": "LGC-EQ-012",
+"tipo": "Grúa horquilla",
+"marca": "Heli",
+"modelo": "CPCD50 W2G",
+"anio": 2024,
+"modalidad": "Arriendo",
+"estado": "Disponible",
+"horometro": null,
+"kilometraje": null,
+"ubicacion": "Calama",
+"patente": "",
+"serie": "",
+"potencia": "",
+"peso": "",
+"capacidad": "5.000 kg",
+"combustible": "",
+"traccion": "",
+"operador": "Con o sin operador",
+"arriendoValor": null,
+"arriendoUnidad": "mes",
+"ventaValor": null,
+"iva": "+ IVA",
+"estandar": [],
+"extras": [
+[
+"Disponibilidad",
+"Inmediata"
+]
+],
+"descripcion": "Grúa horquilla diésel de 5 toneladas con cabina cerrada, para patios de carga, bodegas y faena.",
+"verificacion": "Datos informados por el propietario (tabla de flota, octubre 2026); sujetos a confirmación al cotizar. Fotos referenciales del modelo Heli; confirmar unidad al cotizar.",
+"asesoria": "Arriendo por mes o por proyecto; disponible para traslado a faena.",
+"fotos": [
+"42ec6f2da7aba190f53c1ea4d8c931ba",
+"f7f59ceecc2c8315cbe3e84080411aad"
+]
+},
+{
+"id": "arr-heli-7t",
+"codigo": "LGC-EQ-013",
+"tipo": "Grúa horquilla",
+"marca": "Heli",
+"modelo": "CPQD50",
+"anio": 2024,
+"modalidad": "Arriendo",
+"estado": "Disponible",
+"horometro": null,
+"kilometraje": null,
+"ubicacion": "Calama",
+"patente": "",
+"serie": "",
+"potencia": "",
+"peso": "",
+"capacidad": "7.000 kg (según tabla de flota)",
+"combustible": "",
+"traccion": "",
+"operador": "Con o sin operador",
+"arriendoValor": null,
+"arriendoUnidad": "mes",
+"ventaValor": null,
+"iva": "+ IVA",
+"estandar": [],
+"extras": [
+[
+"Disponibilidad",
+"Inmediata"
+]
+],
+"descripcion": "Grúa horquilla diésel de alto tonelaje con cabina cerrada, para manejo de cargas pesadas.",
+"verificacion": "Datos informados por el propietario (tabla de flota, octubre 2026); sujetos a confirmación al cotizar. Fotos referenciales del modelo Heli; confirmar unidad y capacidad al cotizar.",
+"asesoria": "Arriendo por mes o por proyecto.",
+"fotos": [
+"37e7e911a312614fcb9bf6ca7819ea33",
+"8a9026c4d2057a2fe386ffade90cc4a2",
+"e9c9ada61d9c8da8ab19750016901ab3"
+]
+},
+{
+"id": "arr-pluma-10t",
+"codigo": "LGC-EQ-014",
+"tipo": "Camión pluma",
+"marca": "Volvo",
+"modelo": "28.5 SP",
+"anio": 2023,
+"modalidad": "Arriendo",
+"estado": "Disponible",
+"horometro": null,
+"kilometraje": null,
+"ubicacion": "Calama",
+"patente": "",
+"serie": "",
+"potencia": "",
+"peso": "",
+"capacidad": "Grúa 10 t",
+"combustible": "",
+"traccion": "",
+"operador": "Con o sin operador",
+"arriendoValor": null,
+"arriendoUnidad": "mes",
+"ventaValor": null,
+"iva": "+ IVA",
+"estandar": [],
+"extras": [
+[
+"Disponibilidad",
+"Inmediata"
+]
+],
+"descripcion": "Camión pluma para izaje, carga y descarga de materiales en faena.",
+"verificacion": "Datos informados por el propietario (tabla de flota, octubre 2026); sujetos a confirmación al cotizar.",
+"asesoria": "Puede arrendarse con operador certificado para izaje.",
+"fotos": []
+},
+{
+"id": "arr-pluma-8t",
+"codigo": "LGC-EQ-015",
+"tipo": "Camión pluma",
+"marca": "Volvo",
+"modelo": "28.5 SP automático",
+"anio": 2023,
+"modalidad": "Arriendo",
+"estado": "Disponible",
+"horometro": null,
+"kilometraje": null,
+"ubicacion": "Calama",
+"patente": "",
+"serie": "",
+"potencia": "",
+"peso": "",
+"capacidad": "Grúa 8 t",
+"combustible": "",
+"traccion": "",
+"operador": "Con o sin operador",
+"arriendoValor": null,
+"arriendoUnidad": "mes",
+"ventaValor": null,
+"iva": "+ IVA",
+"estandar": [],
+"extras": [
+[
+"Disponibilidad",
+"Inmediata"
+]
+],
+"descripcion": "Camión pluma con transmisión automática, para izaje y transporte de materiales.",
+"verificacion": "Datos informados por el propietario (tabla de flota, octubre 2026); sujetos a confirmación al cotizar.",
+"asesoria": "Puede arrendarse con operador certificado para izaje.",
+"fotos": []
+},
+{
+"id": "arr-ec210-martillo",
+"codigo": "LGC-EQ-016",
+"tipo": "Excavadora",
+"marca": "Volvo",
+"modelo": "EC210DL con martillo",
+"anio": 2025,
+"modalidad": "Arriendo",
+"estado": "Disponible",
+"horometro": null,
+"kilometraje": null,
+"ubicacion": "Calama",
+"patente": "",
+"serie": "",
+"potencia": "",
+"peso": "",
+"capacidad": "Clase 20 t + martillo hidráulico",
+"combustible": "",
+"traccion": "",
+"operador": "Con o sin operador",
+"arriendoValor": null,
+"arriendoUnidad": "mes",
+"ventaValor": null,
+"iva": "+ IVA",
+"estandar": [],
+"extras": [
+[
+"Disponibilidad",
+"Inmediata"
+]
+],
+"descripcion": "Excavadora de 20 toneladas equipada con martillo hidráulico, para demolición, roca y fracturación.",
+"verificacion": "Datos informados por el propietario (tabla de flota, octubre 2026); sujetos a confirmación al cotizar.",
+"asesoria": "Ideal para trabajos de roca y demolición sin tronadura.",
+"fotos": []
+},
+{
+"id": "arr-jcb-3cx",
+"codigo": "LGC-EQ-017",
+"tipo": "Retroexcavadora",
+"marca": "JCB",
+"modelo": "3CX 4x4",
+"anio": 2021,
+"modalidad": "Arriendo",
+"estado": "Disponible",
+"horometro": null,
+"kilometraje": null,
+"ubicacion": "Calama",
+"patente": "",
+"serie": "",
+"potencia": "",
+"peso": "",
+"capacidad": "Balde 1 m³",
+"combustible": "",
+"traccion": "",
+"operador": "Con o sin operador",
+"arriendoValor": null,
+"arriendoUnidad": "mes",
+"ventaValor": null,
+"iva": "+ IVA",
+"estandar": [],
+"extras": [
+[
+"Disponibilidad",
+"Inmediata"
+],
+[
+"Tracción",
+"4x4"
+]
+],
+"descripcion": "Retroexcavadora 4x4 para zanjas, carguío, limpieza y obras civiles. Equipada con extintor y pértiga.",
+"verificacion": "Datos informados por el propietario (tabla de flota, octubre 2026); sujetos a confirmación al cotizar.",
+"asesoria": "Arriendo diario, mensual o por proyecto. Se puede complementar con martillo hidráulico (LGC-EQ-018 / 019).",
+"fotos": [
+"7f746dd39567bf2aadd032958a4d263e",
+"b831957bace03a81ca8f69fec9434052",
+"7aa2b1ec8574a07ab767e34296d34021",
+"0827dd944f94594304e9693f1b3bb716",
+"7f386abe7dac11b915c9be73a7670144",
+"91391815404940e74b392044f909fe02"
+]
+},
+{
+"id": "arr-martillo-ana",
+"codigo": "LGC-EQ-018",
+"tipo": "Martillo hidráulico",
+"marca": "ANA",
+"modelo": "B40",
+"anio": null,
+"modalidad": "Arriendo",
+"estado": "Disponible",
+"horometro": null,
+"kilometraje": null,
+"ubicacion": "Calama",
+"patente": "",
+"serie": "",
+"potencia": "",
+"peso": "",
+"capacidad": "Para retroexcavadora",
+"combustible": "",
+"traccion": "",
+"operador": "Con o sin operador",
+"arriendoValor": null,
+"arriendoUnidad": "mes",
+"ventaValor": null,
+"iva": "+ IVA",
+"estandar": [],
+"extras": [
+[
+"Disponibilidad",
+"Inmediata"
+]
+],
+"descripcion": "Martillo hidráulico para montar en retroexcavadora.",
+"verificacion": "Datos informados por el propietario (tabla de flota, octubre 2026); sujetos a confirmación al cotizar.",
+"asesoria": "Se arrienda como accesorio, junto a la retroexcavadora o por separado.",
+"fotos": []
+},
+{
+"id": "arr-martillo-jcb",
+"codigo": "LGC-EQ-019",
+"tipo": "Martillo hidráulico",
+"marca": "JCB",
+"modelo": "",
+"anio": null,
+"modalidad": "Arriendo",
+"estado": "Disponible",
+"horometro": null,
+"kilometraje": null,
+"ubicacion": "Calama",
+"patente": "",
+"serie": "",
+"potencia": "",
+"peso": "",
+"capacidad": "Para retroexcavadora",
+"combustible": "",
+"traccion": "",
+"operador": "Con o sin operador",
+"arriendoValor": null,
+"arriendoUnidad": "mes",
+"ventaValor": null,
+"iva": "+ IVA",
+"estandar": [],
+"extras": [
+[
+"Disponibilidad",
+"Inmediata"
+]
+],
+"descripcion": "Martillo hidráulico JCB para montar en retroexcavadora.",
+"verificacion": "Datos informados por el propietario (tabla de flota, octubre 2026); sujetos a confirmación al cotizar.",
+"asesoria": "Se arrienda como accesorio, junto a la retroexcavadora o por separado.",
+"fotos": []
+}
+]
+}</script>
+<script id="lgc-app">
+(() => {
+"use strict";
+const FAMILIAS = {
+  "Excavación": ["Excavadora", "Retroexcavadora", "Minicargador", "Martillo hidráulico"],
+  "Carguío": ["Cargador frontal", "Manipulador telescópico", "Grúa horquilla"],
+  "Chancado y selección": ["Planta chancadora", "Seleccionadora"],
+  "Movimiento de tierra": ["Rodillo compactador", "Motoniveladora", "Bulldozer"],
+  "Transporte e izaje": ["Camión tolva", "Camión pluma", "Camión aljibe", "Camión", "Camioneta"],
+  "Energía y otros": ["Grupo electrógeno", "Otro"]
+};
+const TIPOS = Object.values(FAMILIAS).flat();
+const familiaDe = t => Object.keys(FAMILIAS).find(f => FAMILIAS[f].includes(t)) || "Energía y otros";
+const MODALIDADES = ["Venta", "Arriendo", "Arriendo y venta"];
+const ESTADOS = ["Disponible", "Reservado", "Arrendado", "Vendido"];
+const CIUDADES = ["Arica", "Iquique", "Alto Hospicio", "Antofagasta", "Calama", "Mejillones", "Tocopilla", "Copiapó", "Vallenar", "Otra"];
+const ESTANDAR = ["GPS", "Alarma de retroceso", "Baliza", "Pértiga", "Barra antivuelco", "Cámara de retroceso", "Extintor", "Botiquín", "Cuñas", "Kit antiderrame", "Revisión técnica vigente", "Certificación de grúa", "Mantenciones al día"];
+const IVAS = ["+ IVA", "IVA incluido", "IVA por confirmar", "Tratamiento tributario por confirmar"];
+const INTERESES = ["Comprar un equipo", "Arrendar un equipo", "Apoyo para financiar una compra", "Vender o publicar mi equipo", "Otro"];
+
+let state;
+try { state = JSON.parse(document.getElementById("lgc-data").textContent); } catch (e) { state = { config: {}, equipos: [] }; }
+state.config = Object.assign({ correo: "contacto@lgcasesorias.cl", telefono: "", whatsapp: "", horario: "", zona: "" }, state.config || {});
+state.equipos = Array.isArray(state.equipos) ? state.equipos : [];
+
+const ui = { venta: { fam: "Todas", q: "" }, arriendo: { fam: "Todas", q: "" }, canEdit: false, art: null, assets: null, db: null, uid: null };
+const $ = (s, r = document) => r.querySelector(s);
+const waUrl = (num, txt) => { const d = String(num || "").replace(/\D/g, ""); return d ? "https://wa.me/" + d + (txt ? "?text=" + encodeURIComponent(txt) : "") : ""; };
+const esc = s => String(s ?? "").replace(/[&<>"']/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
+const clp = n => (n == null || n === "" || isNaN(n)) ? "" : "$" + Math.round(Number(n)).toLocaleString("es-CL");
+const num = n => (n == null || n === "" || isNaN(n)) ? "" : Number(n).toLocaleString("es-CL", { maximumFractionDigits: 1 });
+const photoUrl = id => "fotos/" + id + ".jpg";
+const enArriendo = e => e.modalidad === "Arriendo" || e.modalidad === "Arriendo y venta";
+const enVenta = e => e.modalidad === "Venta" || e.modalidad === "Arriendo y venta";
+const nombre = e => [e.marca, e.modelo].filter(Boolean).join(" ") || e.tipo;
+const uso = e => e.horometro ? `${num(e.horometro)} h` : e.kilometraje ? `${num(e.kilometraje)} km` : "—";
+
+function toast(msg) { const t = document.createElement("div"); t.className = "toast"; t.textContent = msg; document.body.appendChild(t); setTimeout(() => t.remove(), 3200); }
+async function copyText(text, el) {
+  try { await navigator.clipboard.writeText(text); toast("Copiado"); }
+  catch (e) { if (el) { const r = document.createRange(); r.selectNodeContents(el); const s = getSelection(); s.removeAllRanges(); s.addRange(r); } toast("Selecciona el texto y cópialo con Ctrl + C"); }
+}
+
+function silhouette(tipo) {
+  const wh = (x, y, r) => `<circle cx="${x}" cy="${y}" r="${r}" fill="currentColor"/><circle cx="${x}" cy="${y}" r="${r * .42}" fill="var(--sunk)"/>`;
+  const exc = `<rect x="40" y="70" width="88" height="16" rx="8" fill="currentColor"/><rect x="50" y="44" width="70" height="24" rx="3" fill="currentColor"/><rect x="58" y="22" width="26" height="24" rx="3" fill="none" stroke="currentColor" stroke-width="5"/><path d="M120 50 L150 18 L176 40 L170 64" fill="none" stroke="currentColor" stroke-width="8" stroke-linejoin="round"/><path d="M160 62 l20 0 l-4 16 l-14 -2z" fill="currentColor"/>`;
+  const load = `<rect x="62" y="46" width="70" height="30" rx="3" fill="currentColor"/><rect x="92" y="18" width="32" height="30" rx="3" fill="none" stroke="currentColor" stroke-width="5"/><path d="M62 54 L34 50" stroke="currentColor" stroke-width="7"/><path d="M14 36 L38 36 L40 70 L12 70Z" fill="currentColor"/>${wh(76, 82, 15)}${wh(122, 82, 15)}`;
+  const truck = `<rect x="14" y="30" width="110" height="38" rx="2" fill="currentColor"/><path d="M128 36 L158 36 L176 52 L176 70 L128 70Z" fill="currentColor"/>${wh(42, 76, 12)}${wh(70, 76, 12)}${wh(156, 76, 12)}`;
+  const plant = `<path d="M20 80 L70 30 L84 30 L44 80Z" fill="currentColor"/><rect x="84" y="40" width="50" height="40" fill="currentColor"/><path d="M134 50 L186 24" stroke="currentColor" stroke-width="7"/>`;
+  const f = familiaDe(tipo);
+  const body = f === "Excavación" ? exc : f === "Carguío" ? load : f === "Chancado y selección" ? plant : f === "Transporte e izaje" ? truck : load;
+  return `<svg viewBox="0 0 196 100" role="img" aria-label="${esc(tipo)}"><line x1="6" y1="96" x2="190" y2="96" stroke="currentColor" stroke-width="2" opacity=".35"/>${body}</svg>`;
+}
+const estadoPill = e => `<span class="pill ${e.estado === "Disponible" ? "ok" : e.estado === "Reservado" ? "warn" : "off"}">${esc(e.estado || "Disponible")}</span>`;
+
+/* ---------- render ---------- */
+function render() {
+  const venta = state.equipos.filter(enVenta), arr = state.equipos.filter(enArriendo);
+  const dv = venta.filter(e => e.estado === "Disponible").length, da = arr.filter(e => e.estado === "Disponible").length;
+  const c = state.config;
+  $("#app").innerHTML = `
+  <header class="bar"><div class="wrap">
+    <a class="brand" href="#inicio"><span class="mark">LGC</span><span><b>LGC Asesorías Zona Norte</b><small>Arriendo · Venta · Financiamiento</small></span></a>
+    <nav class="nav" aria-label="Secciones"><a href="#venta">Venta</a><a href="#arriendo">Arriendo</a><a href="#financiamiento">Financiamiento</a><a href="#contacto">Contacto</a>${ui.canEdit ? `<a href="#gestion">Gestionar</a>` : ""}</nav>
+  </div></header>
+  <main id="inicio">
+  <section class="wrap hero">
+    <h1>Maquinaria y vehículos para faena en el norte</h1>
+    <p>Asesoramos a empresas de ${esc(c.zona || "la zona norte")} en la compra y el arriendo de equipos con estándar minero. Si lo necesita, también le apoyamos en la búsqueda de financiamiento.</p>
+    <div class="lines">
+      <a class="line venta" href="#venta"><h2>Venta</h2><p>Equipos usados revisados, con ficha técnica, fotos y precio.</p><span class="n">${dv} equipos disponibles</span></a>
+      <a class="line arriendo" href="#arriendo"><h2>Arriendo</h2><p>Por día, mes o proyecto, con o sin operador.</p><span class="n">${da ? da + " equipos disponibles" : "Búsqueda a pedido"}</span></a>
+      <a class="line fin" href="#financiamiento"><span class="tag">Adicional</span><h2>Financiamiento</h2><p>Le ayudamos a conseguir leasing o crédito para su compra.</p><span class="n">Leasing · crédito · opción de compra</span></a>
+    </div>
+  </section>
+  ${seccion("venta", "Equipos en venta", "Línea 1 · Venta", venta)}
+  ${seccion("arriendo", "Equipos en arriendo", "Línea 2 · Arriendo", arr)}
+  ${financiamientoHTML()}
+  ${contactoHTML()}
+  ${ui.canEdit ? `<section class="wrap section" id="gestion"><div id="admin"></div></section>` : ""}
+  </main>
+  ${c.whatsapp ? `<a class="wa-float" href="${esc(waUrl(c.whatsapp, "Hola LGC Asesorías Zona Norte, quiero consultar por equipos."))}" target="_blank" rel="noopener" aria-label="Escribir por WhatsApp">WhatsApp</a>` : ""}
+  <footer><div class="wrap">LGC Asesorías · Asesoría en venta, arriendo y financiamiento de vehículos y maquinaria · <span class="mono">${esc(c.correo)}</span>${c.whatsapp ? ` · WhatsApp <a class="mono" href="${esc(waUrl(c.whatsapp))}" target="_blank" rel="noopener">${esc(c.whatsapp)}</a>` : ""}<br>Datos técnicos, horómetros y precios informados por los propietarios de cada equipo; sujetos a inspección y confirmación.</div></footer>
+  <dialog id="dlg" aria-labelledby="dlg-t"></dialog>`;
+  bind();
+  renderGrid("venta"); renderGrid("arriendo");
+  if (ui.canEdit) renderAdmin();
+}
+function seccion(key, titulo, kicker, lista) {
+  const fams = Object.keys(FAMILIAS).filter(f => lista.some(e => familiaDe(e.tipo) === f));
+  return `<section class="wrap section" id="${key}">
+    <div class="sec-head"><div><span class="kicker">${kicker}</span><h2>${titulo}</h2></div><span class="label">${key === "venta" ? "Precios en pesos chilenos" : "Valores netos en pesos chilenos"}</span></div>
+    ${lista.length ? `<div class="filters" role="group" aria-label="Familia de equipo">
+      ${["Todas", ...fams].map(f => `<button type="button" class="fam" data-sec="${key}" data-fam="${esc(f)}" aria-pressed="${ui[key].fam === f}">${esc(f)}<span class="c">${f === "Todas" ? lista.length : lista.filter(e => familiaDe(e.tipo) === f).length}</span></button>`).join("")}
+      <input type="search" id="q-${key}" placeholder="Buscar marca, modelo o código" value="${esc(ui[key].q)}" aria-label="Buscar en ${titulo.toLowerCase()}">
+    </div><div class="grid" id="grid-${key}"></div>` : (key === "arriendo" ? `<div class="empty">
+      <div><h3>Le buscamos el equipo en arriendo</h3><p>Estamos sumando equipos propios y de socios a esta sección. Cuéntenos qué necesita, para qué faena y por cuánto tiempo, y le enviamos alternativas con estándar minero.</p>
+      <div class="actions"><button class="btn arr" type="button" data-pedir="Arrendar un equipo">Solicitar un equipo en arriendo</button></div></div>
+      <div class="want">${["Retroexcavadora", "Excavadora", "Cargador frontal", "Rodillo compactador", "Grúa horquilla", "Camión pluma", "Camión tolva", "Camioneta 4x4"].map(x => `<span>${x}</span>`).join("")}</div>
+    </div>` : `<div class="empty"><div><h3>Sin equipos publicados</h3><p>Escríbanos y le ayudamos a encontrar lo que busca.</p></div></div>`)}
+  </section>`;
+}
+function renderGrid(key) {
+  const g = $("#grid-" + key); if (!g) return;
+  const f = ui[key], q = f.q.trim().toLowerCase();
+  const base = state.equipos.filter(key === "venta" ? enVenta : enArriendo);
+  const orden = { Disponible: 0, Reservado: 1, Arrendado: 2, Vendido: 3 };
+  const l = base.filter(e => (f.fam === "Todas" || familiaDe(e.tipo) === f.fam) && (!q || [e.tipo, e.marca, e.modelo, e.codigo, e.ubicacion].join(" ").toLowerCase().includes(q)))
+    .sort((a, b) => (orden[a.estado] ?? 0) - (orden[b.estado] ?? 0));
+  if (!l.length) { g.innerHTML = `<p class="note" style="grid-column:1/-1">Ningún equipo coincide con la búsqueda.</p>`; return; }
+  g.innerHTML = l.map(e => {
+    const fotos = e.fotos || [];
+    const precio = key === "venta" ? (e.ventaValor ? `<strong>${clp(e.ventaValor)}</strong><small>${esc(e.iva || "+ IVA")}</small>` : `<strong>A cotizar</strong>`)
+      : (e.arriendoValor ? `<strong>${clp(e.arriendoValor)}</strong><small>/ ${esc(e.arriendoUnidad || "mes")} + IVA</small>` : `<strong>A cotizar</strong>`);
+    return `<button type="button" class="card" data-open="${esc(e.id)}" data-mode="${key}" aria-label="Ver ficha de ${esc(e.tipo + " " + nombre(e))}">
+      <div class="ph">${fotos.length ? `<img src="${photoUrl(fotos[0])}" alt="" loading="lazy" data-tipo="${esc(e.tipo)}">` : silhouette(e.tipo)}
+        <div class="tags">${key === "venta" ? `<span class="pill ven">Venta</span>` : `<span class="pill arr">Arriendo</span>`}${e.modalidad === "Arriendo y venta" ? `<span class="pill">${key === "venta" ? "También en arriendo" : "También en venta"}</span>` : ""}</div>
+        ${fotos.length > 1 ? `<span class="nfot">${fotos.length} fotos</span>` : ""}</div>
+      <div class="cb">
+        <div class="top"><span class="tipo">${esc(e.tipo)}</span>${estadoPill(e)}</div>
+        <h3>${esc(nombre(e))}</h3>
+        <div class="facts"><div><span>Año</span><b>${esc(e.anio || "—")}</b></div><div><span>Uso</span><b>${uso(e)}</b></div><div><span>Ciudad</span><b>${esc(e.ubicacion || "—")}</b></div></div>
+        <div class="price">${precio}</div>
+        <div style="display:flex;justify-content:space-between;align-items:center;gap:8px"><span class="code">${esc(e.codigo || "")}</span>${key === "venta" ? `<span class="finlink">Financiable</span>` : ""}</div>
+      </div></button>`;
+  }).join("");
+  g.querySelectorAll("img[data-tipo]").forEach(img => img.addEventListener("error", () => { const w = document.createElement("span"); w.innerHTML = silhouette(img.dataset.tipo); img.replaceWith(w.firstChild); }, { once: true }));
+}
+function bind() {
+  document.querySelectorAll("[data-fam]").forEach(b => b.addEventListener("click", () => {
+    const k = b.dataset.sec; ui[k].fam = b.dataset.fam;
+    document.querySelectorAll(`[data-sec="${k}"]`).forEach(x => x.setAttribute("aria-pressed", x === b)); renderGrid(k);
+  }));
+  ["venta", "arriendo"].forEach(k => { const i = $("#q-" + k); if (i) i.addEventListener("input", () => { ui[k].q = i.value; renderGrid(k); }); const g = $("#grid-" + k); if (g) g.addEventListener("click", ev => { const c = ev.target.closest("[data-open]"); if (c) openFicha(c.dataset.open, c.dataset.mode); }); });
+  document.querySelectorAll("[data-pedir]").forEach(b => b.addEventListener("click", () => irContacto(b.dataset.pedir, "")));
+  $("#f-cotizar").addEventListener("click", () => irContacto("Apoyo para financiar una compra", ""));
+  $("#c-form").addEventListener("submit", enviarConsulta);
+  $("#c-copy-mail").addEventListener("click", () => copyText(state.config.correo, $("#c-mail")));
+  $("#dlg").addEventListener("click", ev => { if (ev.target === ev.currentTarget) ev.currentTarget.close(); });
+}
+function irContacto(interes, equipo, mensaje) {
+  $("#c-interes").value = interes; if (equipo !== undefined) $("#c-equipo").value = equipo; if (mensaje) $("#c-mensaje").value = mensaje;
+  $("#contacto").scrollIntoView({ behavior: "smooth" }); setTimeout(() => $("#c-nombre").focus({ preventScroll: true }), 450);
+}
+
+/* ---------- ficha ---------- */
+function openFicha(id, mode) {
+  const e = state.equipos.find(x => x.id === id); if (!e) return;
+  const d = $("#dlg"), fotos = e.fotos || [];
+  const spec = [["Código", e.codigo], ["Tipo", e.tipo], ["Marca / modelo", nombre(e)], ["Año", e.anio], ["Horómetro", e.horometro ? num(e.horometro) + " h" : ""], ["Kilometraje", e.kilometraje ? num(e.kilometraje) + " km" : ""],
+    ["Patente", e.patente], ["N.º de serie", e.serie], ["Potencia / motor", e.potencia], ["Peso operativo", e.peso], ["Capacidad", e.capacidad], ["Combustible", e.combustible], ["Tracción / rodado", e.traccion], ["Operador", e.operador],
+    ...(e.extras || []), ["Ubicación", e.ubicacion], ["Estado", e.estado]].filter(r => r[1] !== undefined && r[1] !== null && r[1] !== "");
+  const venta = mode !== "arriendo" && enVenta(e);
+  const ref = `${e.codigo || ""} · ${e.tipo} ${nombre(e)}`.trim();
+  d.innerHTML = `
+    <div class="dlg-head"><h3 id="dlg-t">${esc(e.tipo)} ${esc(nombre(e))}</h3>${enVenta(e) ? `<span class="pill ven">Venta</span>` : ""}${enArriendo(e) ? `<span class="pill arr">Arriendo</span>` : ""}<button class="x" type="button" data-close aria-label="Cerrar">×</button></div>
+    <div class="dlg-body">
+      <div class="gal">
+        <div class="main" id="g-main">${fotos.length ? `<img src="${photoUrl(fotos[0])}" alt="${esc(e.tipo + " " + nombre(e))}">` : silhouette(e.tipo)}</div>
+        ${fotos.length > 1 ? `<div class="thumbs">${fotos.map((f, i) => `<button type="button" data-ph="${esc(f)}" aria-current="${i === 0}" aria-label="Foto ${i + 1} de ${fotos.length}"><img src="${photoUrl(f)}" alt=""></button>`).join("")}</div>` : ""}
+        ${e.descripcion ? `<p class="desc">${esc(e.descripcion)}</p>` : ""}
+        ${e.estandar && e.estandar.length ? `<div style="margin-top:12px"><span class="label">Estándar minero</span><ul class="checks">${e.estandar.map(s => `<li>${esc(s)}</li>`).join("")}</ul></div>` : ""}
+        ${e.verificacion ? `<p class="verif">${esc(e.verificacion)}</p>` : ""}
+      </div>
+      <div>
+        <div class="plate"><div class="plate-t">Ficha técnica</div><dl class="spec">${spec.map(([k, v]) => `<dt>${esc(k)}</dt><dd>${esc(v)}</dd>`).join("")}</dl></div>
+        ${enVenta(e) ? `<div class="buybox"><span class="label">Precio de venta</span><span><strong>${e.ventaValor ? clp(e.ventaValor) : "A cotizar"}</strong> <small>${esc(e.ventaValor ? (e.iva || "+ IVA") : "")}</small></span></div>` : ""}
+        ${enArriendo(e) ? `<div class="buybox arr"><span class="label">Arriendo</span><span><strong>${e.arriendoValor ? clp(e.arriendoValor) : "A cotizar"}</strong> <small>${e.arriendoValor ? "/ " + esc(e.arriendoUnidad || "mes") + " + IVA" : ""}</small></span></div>` : ""}
+        <div class="advice"><span class="label">Asesoría LGC</span><div>${esc(e.asesoria || "Le acompañamos en la revisión técnica, la negociación y, si lo necesita, en la búsqueda de financiamiento.")}</div></div>
+        <div class="actions">
+          ${enVenta(e) ? `<button class="btn venta" type="button" data-q="Comprar un equipo">Quiero comprarlo</button>` : ""}
+          ${enArriendo(e) ? `<button class="btn arr" type="button" data-q="Arrendar un equipo">Quiero arrendarlo</button>` : ""}
+          ${enVenta(e) ? `<button class="btn fin" type="button" data-q="Apoyo para financiar una compra">Consultar financiamiento</button>` : ""}
+          ${state.config.whatsapp ? `<a class="btn wa" href="${esc(waUrl(state.config.whatsapp, "Hola LGC Asesorías Zona Norte, me interesa el equipo " + (e.codigo || "") + " · " + e.tipo + " " + nombre(e) + "."))}" target="_blank" rel="noopener">Consultar por WhatsApp</a>` : ""}
+        </div>
+      </div>
+    </div>`;
+  d.querySelector("[data-close]").addEventListener("click", () => d.close());
+  d.querySelectorAll("[data-ph]").forEach(b => b.addEventListener("click", () => {
+    $("#g-main").innerHTML = `<img src="${photoUrl(b.dataset.ph)}" alt="${esc(e.tipo + " " + nombre(e))}">`;
+    d.querySelectorAll("[data-ph]").forEach(x => x.setAttribute("aria-current", x === b));
+  }));
+  d.querySelectorAll("[data-q]").forEach(b => b.addEventListener("click", () => { d.close(); irContacto(b.dataset.q, ref); }));
+  d.showModal();
+}
+
+/* ---------- financiamiento (servicio adicional) ---------- */
+function financiamientoHTML() {
+  return `<section class="wrap section" id="financiamiento">
+    <div class="sec-head"><div><span class="kicker">Servicio adicional</span><h2>Apoyo en financiamiento</h2></div><span class="label">Para la compra de equipos</span></div>
+    <div class="finwrap">
+      <div class="finpitch">
+        <h3>Le ayudamos a financiar su compra</h3>
+        <p style="margin:0;color:var(--muted)">Si compra un equipo a través de LGC Asesorías, le apoyamos en la búsqueda del financiamiento que mejor se ajuste al flujo de su empresa.</p>
+        <ul>
+          <li><i></i><span><b>Leasing financiero u operativo</b>Cuotas mensuales y opción de compra al final del contrato.</span></li>
+          <li><i></i><span><b>Crédito comercial o automotriz</b>El equipo queda a nombre de su empresa desde el inicio.</span></li>
+          <li><i></i><span><b>Arriendo con opción de compra</b>Para probar el equipo antes de la inversión definitiva.</span></li>
+        </ul>
+        <ol class="flow"><li>Elegimos el equipo y validamos su estado.</li><li>Reunimos antecedentes y cotizamos con bancos y empresas de leasing.</li><li>Comparamos las ofertas y le acompañamos al cierre.</li></ol>
+        <div class="actions"><button class="btn fin" type="button" id="f-cotizar">Quiero apoyo para financiar</button></div>
+      </div>
+      <div class="panel">
+        <h3 style="font-size:26px;color:var(--ink);text-transform:uppercase;margin-bottom:8px">Comparar alternativas</h3>
+        <div class="cmp-wrap"><table class="t">
+          <thead><tr><th></th><th>Arriendo</th><th>Leasing</th><th>Crédito</th></tr></thead>
+          <tbody>
+            <tr><th>Inversión inicial</th><td>Sin pie</td><td>Primera cuota o pie bajo</td><td>Pie según la entidad</td></tr>
+            <tr><th>Propiedad</th><td>No</td><td>Al ejercer la opción de compra</td><td>Desde el inicio</td></tr>
+            <tr><th>Mantención</th><td>Normalmente incluida</td><td>Del cliente (leasing financiero)</td><td>Del cliente</td></tr>
+            <tr><th>Conviene cuando</th><td>Proyectos cortos o demanda variable</td><td>Uso continuo de 2 a 5 años</td><td>Uso de largo plazo</td></tr>
+            <tr><th>Tributario</th><td>Gasto del período</td><td>Cuotas como gasto (validar con su contador)</td><td>Depreciación e intereses</td></tr>
+          </tbody></table></div>
+        <p class="note">Las condiciones finales (tasa, pie, plazo y garantías) dependen de la evaluación de cada banco o empresa de leasing.</p>
+      </div>
+    </div>
+  </section>`;
+}
+/* ---------- contacto ---------- */
+function contactoHTML() {
+  const c = state.config;
+  return `<section class="wrap section" id="contacto">
+    <div class="sec-head"><div><span class="kicker">Contacto</span><h2>Solicite una cotización</h2></div><span class="label">Respondemos en un día hábil</span></div>
+    <div class="contact">
+      <form class="panel form" id="c-form" novalidate>
+        <div class="field"><label for="c-nombre">Nombre</label><input id="c-nombre" required autocomplete="name"></div>
+        <div class="field"><label for="c-empresa">Empresa</label><input id="c-empresa" autocomplete="organization"></div>
+        <div class="field"><label for="c-correo">Correo</label><input id="c-correo" type="email" required autocomplete="email"></div>
+        <div class="field"><label for="c-fono">Teléfono</label><input id="c-fono" type="tel" autocomplete="tel"></div>
+        <div class="field"><label for="c-interes">Necesito</label><select id="c-interes">${INTERESES.map(x => `<option>${x}</option>`).join("")}</select></div>
+        <div class="field"><label for="c-ciudad">Ciudad de la faena</label><input id="c-ciudad" list="dl-ciudades"><datalist id="dl-ciudades">${CIUDADES.map(x => `<option>${x}</option>`).join("")}</datalist></div>
+        <div class="field full"><label for="c-equipo">Equipo de interés</label><input id="c-equipo" placeholder="Ej.: excavadora de 20 t, o el código del catálogo"></div>
+        <div class="field full"><label for="c-mensaje">Detalle</label><textarea id="c-mensaje" placeholder="Plazo, fecha de inicio, con o sin operador, presupuesto…"></textarea></div>
+        <div class="full" style="display:flex;gap:10px;align-items:center;flex-wrap:wrap"><button class="btn venta" type="submit">Enviar solicitud</button><span class="note" id="c-status" style="margin:0"></span></div>
+        <div class="full" id="c-fallback" hidden></div>
+      </form>
+      <div class="panel">
+        <span class="label">Correo</span>
+        <div style="display:flex;align-items:center;flex-wrap:wrap;gap:4px;margin:4px 0 12px"><span class="addr" id="c-mail">${esc(c.correo)}</span><button class="copy" type="button" id="c-copy-mail">Copiar</button></div>
+        ${c.telefono ? `<span class="label">Teléfono</span><div class="addr" style="margin:4px 0 12px">${esc(c.telefono)}</div>` : ""}
+        ${c.whatsapp ? `<span class="label">WhatsApp</span><div style="margin:4px 0 12px"><a class="btn wa" href="${esc(waUrl(c.whatsapp, "Hola LGC Asesorías Zona Norte, quiero consultar por equipos."))}" target="_blank" rel="noopener">WhatsApp ${esc(c.whatsapp)}</a></div>` : ""}
+        ${c.horario ? `<span class="label">Horario</span><div style="margin:4px 0 12px">${esc(c.horario)}</div>` : ""}
+        ${c.zona ? `<span class="label">Cobertura</span><div style="margin-top:4px">${esc(c.zona)}</div>` : ""}
+      </div>
+    </div>
+  </section>`;
+}
+function textoConsulta(v) {
+  return `Hola LGC Asesorías,\n\n${v.interes}${v.equipo ? ": " + v.equipo : ""}.\n${v.ciudad ? "Ciudad de la faena: " + v.ciudad + "\n" : ""}${v.mensaje ? "\n" + v.mensaje + "\n" : ""}\n${v.nombre}${v.empresa ? " · " + v.empresa : ""}\n${v.correo}${v.fono ? " · " + v.fono : ""}`;
+}
+async function enviarConsulta(ev) {
+  ev.preventDefault();
+  const v = { nombre: $("#c-nombre").value.trim(), empresa: $("#c-empresa").value.trim(), correo: $("#c-correo").value.trim(), fono: $("#c-fono").value.trim(),
+    interes: $("#c-interes").value, ciudad: $("#c-ciudad").value.trim(), equipo: $("#c-equipo").value.trim(), mensaje: $("#c-mensaje").value.trim() };
+  const st = $("#c-status");
+  if (!v.nombre || !/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(v.correo)) { st.textContent = "Indique su nombre y un correo válido."; return; }
+  let ok = false;
+  if (ui.db && ui.uid) {
+    try {
+      const ref = ui.db.doc("consultas/" + ui.uid), snap = await ref.get();
+      const items = snap.exists ? (snap.data().items || []).slice(-49) : [];
+      items.push(Object.assign({ fecha: new Date().toISOString() }, v)); await ref.set({ items }); ok = true;
+    } catch (e) { ok = false; }
+  }
+  const fb = $("#c-fallback");
+  if (ok) { st.textContent = "Solicitud enviada. Le contactaremos pronto."; fb.hidden = true; ev.target.reset(); return; }
+  st.textContent = ""; fb.hidden = false;
+  fb.innerHTML = `<div class="advice" style="margin:0"><span class="label">Último paso</span><div>Envíe su solicitud por WhatsApp o por correo; el mensaje ya va escrito.</div><div class="actions" style="margin-top:8px"><a class="btn wa" id="c-wa" target="_blank" rel="noopener">Enviar por WhatsApp</a><a class="btn" id="c-mailto">Enviar por correo</a></div><div class="msgbox" id="c-txt"></div><button class="btn" type="button" id="c-copy" style="margin-top:8px">Copiar mensaje</button></div>`;
+  const txt = textoConsulta(v); $("#c-txt").textContent = txt; $("#c-wa").href = waUrl(state.config.whatsapp, txt); $("#c-mailto").href = "mailto:" + state.config.correo + "?subject=" + encodeURIComponent("Solicitud de cotización · " + v.interes) + "&body=" + encodeURIComponent(txt);
+  $("#c-copy").addEventListener("click", () => copyText(`Para: ${state.config.correo}\nAsunto: Solicitud de cotización · ${v.interes}\n\n${txt}`, $("#c-txt")));
+}
+
+/* ---------- gestión ---------- */
+let editing = null;
+function renderAdmin() {
+  const a = $("#admin"); if (!a) return; const c = state.config;
+  a.innerHTML = `<div class="admin">
+    <div class="sec-head" style="border-bottom-color:var(--ink)"><div><span class="kicker">Solo editores</span><h2>Gestionar catálogo</h2></div><button class="btn" type="button" id="a-new">Agregar equipo</button></div>
+    <p class="note" style="margin-top:0">Cada cambio guardado se publica para todos los que tienen el enlace.</p>
+    <div id="a-confirm"></div>
+    <div class="adm-scroll"><table class="adm-table"><thead><tr><th>Código</th><th>Equipo</th><th>Línea</th><th>Precio</th><th>Estado</th><th>Fotos</th><th></th></tr></thead><tbody>
+      ${state.equipos.map(e => `<tr><td class="mono">${esc(e.codigo)}</td><td>${esc(e.tipo)} ${esc(nombre(e))}</td><td>${esc(e.modalidad)}</td><td class="mono">${clp(e.ventaValor || e.arriendoValor) || "—"}</td>
+        <td><select class="mini" data-estado="${esc(e.id)}" aria-label="Estado de ${esc(e.codigo)}">${ESTADOS.map(s => `<option ${e.estado === s ? "selected" : ""}>${s}</option>`).join("")}</select></td>
+        <td class="mono">${(e.fotos || []).length}</td><td><div class="row-actions"><button class="mini" type="button" data-edit="${esc(e.id)}">Editar</button><button class="mini" type="button" data-del="${esc(e.id)}">Eliminar</button></div></td></tr>`).join("") || `<tr><td colspan="7">Sin equipos todavía.</td></tr>`}
+    </tbody></table></div>
+    <h3 style="font-size:24px;margin:20px 0 8px;color:var(--ink);text-transform:uppercase">Datos de contacto del sitio</h3>
+    <div class="form">
+      <div class="field"><label for="k-correo">Correo</label><input id="k-correo" value="${esc(c.correo)}"></div>
+      <div class="field"><label for="k-tel">Teléfono</label><input id="k-tel" value="${esc(c.telefono)}" placeholder="+56 9 …"></div>
+      <div class="field"><label for="k-wa">WhatsApp</label><input id="k-wa" value="${esc(c.whatsapp)}"></div>
+      <div class="field"><label for="k-hor">Horario</label><input id="k-hor" value="${esc(c.horario)}"></div>
+      <div class="field full"><label for="k-zona">Cobertura</label><input id="k-zona" value="${esc(c.zona)}"></div>
+      <div class="full"><button class="btn" type="button" id="k-save">Guardar datos de contacto</button></div>
+    </div>
+    <h3 style="font-size:24px;margin:20px 0 8px;color:var(--ink);text-transform:uppercase">Solicitudes recibidas en la página</h3>
+    <div id="a-consultas"><p class="note">Cargando…</p></div>
+  </div>`;
+  $("#a-new").addEventListener("click", () => openEditor(null));
+  a.querySelectorAll("[data-edit]").forEach(b => b.addEventListener("click", () => openEditor(b.dataset.edit)));
+  a.querySelectorAll("[data-del]").forEach(b => b.addEventListener("click", () => {
+    const e = state.equipos.find(x => x.id === b.dataset.del);
+    askConfirm(`Eliminar ${e.codigo} · ${e.tipo} ${nombre(e)} del catálogo.`, () => { state.equipos = state.equipos.filter(x => x.id !== e.id); publicar("Equipo eliminado"); });
+  }));
+  a.querySelectorAll("[data-estado]").forEach(s => s.addEventListener("change", () => { const e = state.equipos.find(x => x.id === s.dataset.estado); e.estado = s.value; publicar("Estado actualizado: " + s.value); }));
+  $("#k-save").addEventListener("click", () => {
+    Object.assign(state.config, { correo: $("#k-correo").value.trim() || "contacto@lgcasesorias.cl", telefono: $("#k-tel").value.trim(), whatsapp: $("#k-wa").value.trim(), horario: $("#k-hor").value.trim(), zona: $("#k-zona").value.trim() });
+    publicar("Datos de contacto guardados");
+  });
+  cargarConsultas();
+}
+function askConfirm(msg, fn) {
+  const box = $("#a-confirm");
+  box.innerHTML = `<div class="confirm"><span>${esc(msg)}</span><button class="btn danger" type="button" id="cf-yes">Confirmar</button><button class="mini" type="button" id="cf-no">Cancelar</button></div>`;
+  $("#cf-yes").addEventListener("click", () => { box.innerHTML = ""; fn(); });
+  $("#cf-no").addEventListener("click", () => { box.innerHTML = ""; });
+  box.scrollIntoView({ behavior: "smooth", block: "center" });
+}
+async function cargarConsultas() {
+  const box = $("#a-consultas"); if (!box) return;
+  if (!ui.db) { box.innerHTML = `<p class="note">Los visitantes externos copian su mensaje y lo envían a ${esc(state.config.correo)}.</p>`; return; }
+  try {
+    const snap = await ui.db.collection("consultas").get(); const qs = [];
+    snap.docs.forEach(d => (d.data().items || []).forEach(it => qs.push(it)));
+    qs.sort((a, b) => String(b.fecha).localeCompare(String(a.fecha)));
+    box.innerHTML = qs.length ? `<div class="adm-scroll"><table class="adm-table"><thead><tr><th>Fecha</th><th>Nombre</th><th>Empresa</th><th>Contacto</th><th>Necesita</th><th>Detalle</th></tr></thead><tbody>${qs.map(q => `<tr><td class="mono">${esc(new Date(q.fecha).toLocaleString("es-CL"))}</td><td>${esc(q.nombre)}</td><td>${esc(q.empresa)}</td><td class="mono">${esc(q.correo)}<br>${esc(q.fono)}</td><td>${esc(q.interes)}${q.equipo ? "<br>" + esc(q.equipo) : ""}</td><td>${esc(q.ciudad)}${q.mensaje ? " · " + esc(q.mensaje) : ""}</td></tr>`).join("")}</tbody></table></div>`
+      : `<p class="note">Todavía no hay solicitudes guardadas. Las de visitantes externos llegan a ${esc(state.config.correo)}.</p>`;
+  } catch (e) { box.innerHTML = `<p class="note">No se pudieron cargar las solicitudes en esta vista.</p>`; }
+}
+function nextCodigo() {
+  const n = state.equipos.map(e => /^LGC-EQ-(\d+)$/.exec(e.codigo || "")).filter(Boolean).map(m => +m[1]);
+  return "LGC-EQ-" + String((n.length ? Math.max(...n) : 0) + 1).padStart(3, "0");
+}
+function openEditor(id) {
+  const base = id ? state.equipos.find(e => e.id === id) : null;
+  editing = JSON.parse(JSON.stringify(base || { id: "e" + Date.now().toString(36), codigo: nextCodigo(), tipo: "Excavadora", marca: "", modelo: "", anio: new Date().getFullYear(), modalidad: "Venta", estado: "Disponible",
+    horometro: null, kilometraje: null, ubicacion: "Antofagasta", patente: "", serie: "", potencia: "", peso: "", capacidad: "", combustible: "Diésel", traccion: "", operador: "", arriendoValor: null, arriendoUnidad: "mes", ventaValor: null, iva: "+ IVA",
+    estandar: [], extras: [], descripcion: "", verificacion: "", asesoria: "", fotos: [] }));
+  const e = editing, d = $("#dlg");
+  const opt = (arr, v) => arr.map(x => `<option ${x === v ? "selected" : ""}>${esc(x)}</option>`).join("");
+  const inp = (k, label, type = "text", extra = "") => `<div class="field"><label for="ed-${k}">${label}</label><input id="ed-${k}" type="${type}" value="${esc(e[k] ?? "")}" ${extra}></div>`;
+  d.innerHTML = `<div class="dlg-head"><h3 id="dlg-t">${base ? "Editar " + esc(e.codigo) : "Nuevo equipo"}</h3><button class="x" type="button" data-close aria-label="Cerrar">×</button></div>
+  <form class="form" id="ed-form" style="padding:16px">
+    ${inp("codigo", "Código")}
+    <div class="field"><label for="ed-tipo">Tipo</label><select id="ed-tipo">${opt(TIPOS, e.tipo)}</select></div>
+    ${inp("marca", "Marca")}${inp("modelo", "Modelo")}
+    ${inp("anio", "Año", "number", 'min="1980" max="2035"')}
+    <div class="field"><label for="ed-modalidad">Línea</label><select id="ed-modalidad">${opt(MODALIDADES, e.modalidad)}</select></div>
+    <div class="field"><label for="ed-estado">Estado</label><select id="ed-estado">${opt(ESTADOS, e.estado)}</select></div>
+    <div class="field"><label for="ed-ubicacion">Ubicación</label><input id="ed-ubicacion" list="dl-ciudades" value="${esc(e.ubicacion)}"></div>
+    ${inp("horometro", "Horómetro (h)", "number", 'min="0" step="0.1"')}${inp("kilometraje", "Kilometraje (km)", "number", 'min="0"')}
+    ${inp("patente", "Patente")}${inp("serie", "N.º de serie")}
+    ${inp("potencia", "Potencia / motor")}${inp("peso", "Peso operativo")}
+    <div class="field full"><label for="ed-capacidad">Capacidad / medidas clave</label><input id="ed-capacidad" value="${esc(e.capacidad)}"></div>
+    ${inp("combustible", "Combustible")}${inp("traccion", "Tracción / rodado")}
+    <div class="field"><label for="ed-operador">Operador (arriendo)</label><select id="ed-operador">${opt(["", "Con o sin operador", "Con operador", "Sin operador"], e.operador)}</select></div>
+    <div class="field"><label for="ed-iva">Impuesto en precio de venta</label><select id="ed-iva">${opt(IVAS, e.iva || "+ IVA")}</select></div>
+    ${inp("ventaValor", "Precio venta ($)", "number", 'min="0" step="100000"')}
+    ${inp("arriendoValor", "Precio arriendo neto ($)", "number", 'min="0" step="1000"')}
+    <div class="field"><label for="ed-arriendoUnidad">Arriendo por</label><select id="ed-arriendoUnidad">${opt(["día", "semana", "mes"], e.arriendoUnidad)}</select></div>
+    <div class="field"></div>
+    <div class="field full"><label for="ed-extras">Otras especificaciones (una por línea, "Etiqueta: valor")</label><textarea id="ed-extras">${esc((e.extras || []).map(([k, v]) => k + ": " + v).join("\n"))}</textarea></div>
+    <div class="field full"><label>Estándar minero</label><div class="chk-grid">${ESTANDAR.map((s, i) => `<label><input type="checkbox" id="ed-std-${i}" ${e.estandar.includes(s) ? "checked" : ""}>${esc(s)}</label>`).join("")}</div></div>
+    <div class="field full"><label for="ed-descripcion">Descripción</label><textarea id="ed-descripcion">${esc(e.descripcion)}</textarea></div>
+    <div class="field full"><label for="ed-verificacion">Nota de verificación (origen de los datos)</label><textarea id="ed-verificacion">${esc(e.verificacion)}</textarea></div>
+    <div class="field full"><label for="ed-asesoria">Comentario de asesoría y financiamiento</label><textarea id="ed-asesoria">${esc(e.asesoria)}</textarea></div>
+    <div class="field full"><label for="ed-file">Fotos (JPG, PNG o WEBP; la primera es la portada)</label>
+      ${ui.assets ? `<input id="ed-file" type="file" accept="image/jpeg,image/png,image/webp" multiple>` : `<p class="note" style="margin:0">La carga de fotos no está disponible en esta vista.</p>`}
+      <div class="ed-photos" id="ed-photos" style="margin-top:8px"></div><span class="note" id="ed-up" style="margin:0"></span></div>
+    <div class="full" style="display:flex;gap:8px;flex-wrap:wrap;border-top:1px solid var(--line);padding-top:12px"><button class="btn venta" type="submit">Guardar y publicar</button><button class="btn" type="button" data-close style="background:transparent;color:var(--fg);border-color:var(--line)">Cancelar</button></div>
+  </form>`;
+  d.querySelectorAll("[data-close]").forEach(b => b.addEventListener("click", () => d.close()));
+  drawPhotos();
+  const f = $("#ed-file");
+  if (f) f.addEventListener("change", async () => {
+    const files = [...f.files]; f.value = "";
+    for (const file of files) {
+      $("#ed-up").textContent = `Subiendo ${file.name}…`;
+      try { if (file.size > 20 * 1024 * 1024) throw { code: "too_large" }; const r = await ui.assets.upload(file); editing.fotos.push(r.id); drawPhotos(); $("#ed-up").textContent = ""; }
+      catch (er) { $("#ed-up").textContent = er && er.code === "too_large" ? `${file.name} pesa más de 20 MB; redúcela e inténtalo de nuevo.` : er && er.code === "unsupported_type" ? `${file.name}: usa JPG, PNG o WEBP.` : `No se pudo subir ${file.name}.`; }
+    }
+  });
+  $("#ed-form").addEventListener("submit", ev => {
+    ev.preventDefault();
+    const g = k => $("#ed-" + k).value.trim(), n = k => { const v = g(k); return v === "" ? null : Number(v); };
+    const extras = g("extras").split("\n").map(l => l.trim()).filter(Boolean).map(l => { const i = l.indexOf(":"); return i > 0 ? [l.slice(0, i).trim(), l.slice(i + 1).trim()] : ["Detalle", l]; });
+    Object.assign(editing, { codigo: g("codigo") || nextCodigo(), tipo: g("tipo"), marca: g("marca"), modelo: g("modelo"), anio: n("anio"), modalidad: g("modalidad"), estado: g("estado"), ubicacion: g("ubicacion"),
+      horometro: n("horometro"), kilometraje: n("kilometraje"), patente: g("patente"), serie: g("serie"), potencia: g("potencia"), peso: g("peso"), capacidad: g("capacidad"), combustible: g("combustible"), traccion: g("traccion"), operador: g("operador"),
+      iva: g("iva"), ventaValor: n("ventaValor"), arriendoValor: n("arriendoValor"), arriendoUnidad: g("arriendoUnidad"), extras, descripcion: g("descripcion"), verificacion: g("verificacion"), asesoria: g("asesoria"),
+      estandar: ESTANDAR.filter((s, i) => $("#ed-std-" + i).checked) });
+    if (!editing.marca && !editing.modelo) { $("#ed-up").textContent = "Indica al menos la marca o el modelo."; return; }
+    const i = state.equipos.findIndex(x => x.id === editing.id);
+    if (i >= 0) state.equipos[i] = editing; else state.equipos.unshift(editing);
+    d.close(); publicar(base ? "Equipo actualizado" : "Equipo agregado");
+  });
+  d.showModal();
+}
+function drawPhotos() {
+  const box = $("#ed-photos"); if (!box) return;
+  box.innerHTML = editing.fotos.map((f, i) => `<figure><img src="${photoUrl(f)}" alt="Foto ${i + 1}"><figcaption>${i ? `<button type="button" data-first="${i}">Portada</button>` : "<span>Portada</span>"}<button type="button" data-rm="${i}">Quitar</button></figcaption></figure>`).join("");
+  box.querySelectorAll("[data-first]").forEach(b => b.addEventListener("click", () => { const [x] = editing.fotos.splice(+b.dataset.first, 1); editing.fotos.unshift(x); drawPhotos(); }));
+  box.querySelectorAll("[data-rm]").forEach(b => b.addEventListener("click", () => { editing.fotos.splice(+b.dataset.rm, 1); drawPhotos(); }));
+}
+
+/* ---------- publicar ---------- */
+const SKELETON_HEAD = '<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>';
+function buildDocument() {
+  const json = JSON.stringify({ config: state.config, equipos: state.equipos }).replace(/</g, "\\u003c");
+  const fonts = document.querySelector('link[rel="stylesheet"][href*="fonts.googleapis"]');
+  return SKELETON_HEAD + '<title>LGC Asesorías Zona Norte</title>\n<meta name="claude:viewport-fit-sides" content="cover">\n<link rel="preconnect" href="https://fonts.googleapis.com">\n' +
+    '<link rel="stylesheet" href="' + (fonts ? fonts.getAttribute("href") : "") + '">\n' +
+    '<style id="lgc-style">' + document.getElementById("lgc-style").textContent + '</style>\n<div id="app"></div>\n' +
+    '<script type="application/json" id="lgc-data">' + json + '<\/script>\n<script id="lgc-app">' + document.getElementById("lgc-app").textContent + '<\/script></body></html>';
+}
+async function publicar(msg) {
+  if (!ui.art) { toast("No se puede guardar en esta vista."); return; }
+  try { sessionStorage.setItem("lgc-msg", msg); } catch (e) {}
+  toast("Publicando…");
+  try { await ui.art.publish(buildDocument()); }
+  catch (er) {
+    try { sessionStorage.removeItem("lgc-msg"); } catch (e) {}
+    const c = er && er.code;
+    if (c === "conflict") toast("Otra persona guardó cambios; se cargará la versión más reciente.");
+    else if (["not_writer", "not_granted", "capability_disabled", "consent_required", "not_declared"].includes(c)) { ui.canEdit = false; toast("Esta vista es de solo lectura."); render(); }
+    else if (c === "too_large") toast("El catálogo es demasiado grande para guardarlo.");
+    else if (c === "rate_limited") toast("Muchos guardados seguidos; espera un momento.");
+    else toast("No se pudo publicar. Inténtalo de nuevo en unos segundos.");
+  }
+}
+
+render();
+try { const m = sessionStorage.getItem("lgc-msg"); if (m) { sessionStorage.removeItem("lgc-msg"); setTimeout(() => toast(m + " y publicado"), 300); } } catch (e) {}
+(async () => {
+  const cl = window.claude; if (!cl || !cl.use) return;
+  const [user, art, assets, db] = await Promise.all(["user", "artifact", "assets", "db"].map(n => cl.use(n).catch(() => null)));
+  ui.art = art; ui.assets = assets; ui.db = db;
+  try { ui.uid = user ? await user.id() : null; } catch (e) { ui.uid = null; }
+  let canEdit = false; try { canEdit = !!(user && await user.canEdit()); } catch (e) {}
+  if (canEdit && art) { ui.canEdit = true; render(); }
+})();
+})();
+</script>
+
+</html>
