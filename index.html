@@ -1523,6 +1523,13 @@ async function publicar(msg) {
 }
 
 render();
+/* Enlace directo a una ficha: ...#LGC-EQ-001 (usado en el catálogo de WhatsApp) */
+function abrirDesdeHash() {
+  const h = decodeURIComponent(location.hash.slice(1)).toUpperCase(); if (!/^LGC-EQ-\d+$/.test(h)) return;
+  const e = state.equipos.find(x => (x.codigo || "").toUpperCase() === h);
+  if (e) setTimeout(() => openFicha(e.id, enVenta(e) ? "venta" : "arriendo"), 200);
+}
+abrirDesdeHash(); addEventListener("hashchange", abrirDesdeHash);
 try { const m = sessionStorage.getItem("lgc-msg"); if (m) { sessionStorage.removeItem("lgc-msg"); setTimeout(() => toast(m + " y publicado"), 300); } } catch (e) {}
 (async () => {
   const cl = window.claude; if (!cl || !cl.use) return;
