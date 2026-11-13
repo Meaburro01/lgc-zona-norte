@@ -198,6 +198,17 @@ table.t{border-collapse:collapse;width:100%;min-width:600px;font-size:13.5px}
 .field label{font-size:12.5px;font-weight:600;color:var(--muted)}
 .field input,.field select,.field textarea{border:1px solid var(--line);background:var(--sunk);border-radius:var(--r);padding:8px 10px;width:100%;min-width:0}
 .field textarea{min-height:84px;resize:vertical}
+.flabel{font-size:12.5px;font-weight:600;color:var(--muted)}
+.flabel small{font-weight:400}
+.multi{border:1px solid var(--line);background:var(--sunk);border-radius:var(--r)}
+.multi summary{padding:8px 10px;cursor:pointer;list-style:none;display:flex;justify-content:space-between;gap:8px}
+.multi summary::-webkit-details-marker{display:none}
+.multi summary::after{content:"▾";color:var(--muted)}
+.multi[open] summary::after{content:"▴"}
+.multi-list{max-height:300px;overflow:auto;padding:2px 10px 10px;border-top:1px solid var(--line);background:var(--surface);border-radius:0 0 var(--r) var(--r)}
+.multi-list .mg{margin-top:8px}
+.multi-list label{display:flex;gap:8px;align-items:flex-start;padding:5px 0;font-size:14px;cursor:pointer;font-weight:400;color:var(--fg)}
+.multi-list input{margin-top:4px;accent-color:var(--venta);width:auto}
 .out{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:1px;background:var(--line);border:1px solid var(--line);border-radius:var(--r);overflow:hidden;margin-top:14px}
 .out div{background:var(--surface);padding:10px 12px}
 .out strong{display:block;font-family:var(--f-data);font-size:18px;font-weight:500}
@@ -326,7 +337,7 @@ footer{padding-block:26px 30px;color:var(--muted);font-size:13px;border-top:1px 
 ]
 ],
 "descripcion": "Excavadora hidráulica sobre orugas, clase 21 t, para excavación, zanjas, conformación de plataformas y carguío de áridos. Hay una segunda unidad gemela (LGC-EQ-002).",
-"verificacion": "Horómetro y especificaciones informados por el propietario, con respaldo fotográfico y certificado de inscripción vigente (09-06-2026). La lista del vendedor indica año 2023; el certificado registral indica 2022. Sujeto a inspección presencial.",
+"verificacion": "",
 "asesoria": "Estamos atentos a sus consultas y a coordinar visitas con verdaderos interesados.",
 "fotos": [
 "7539760bc78d470ea52521d96ccfbf43",
@@ -408,7 +419,7 @@ footer{padding-block:26px 30px;color:var(--muted);font-size:13px;border-top:1px 
 ]
 ],
 "descripcion": "Excavadora hidráulica sobre orugas, clase 21 t, gemela de LGC-EQ-001. Apta para excavación, zanjas, plataformas y carguío de áridos.",
-"verificacion": "Horómetro y especificaciones informados por el propietario, con respaldo fotográfico y certificado de inscripción vigente (09-06-2026). La lista del vendedor indica año 2023; el certificado registral indica 2022. Sujeto a inspección presencial.",
+"verificacion": "",
 "asesoria": "Estamos atentos a sus consultas y a coordinar visitas con verdaderos interesados.",
 "fotos": [
 "62e55d5c4f07691e21dcefd35d433224",
@@ -445,7 +456,7 @@ footer{padding-block:26px 30px;color:var(--muted);font-size:13px;border-top:1px 
 "estandar": [],
 "extras": [],
 "descripcion": "Excavadora sobre orugas de tren largo, la de menor uso del lote (3.660 h).",
-"verificacion": "Año y horómetro informados por el vendedor; datos técnicos referenciales sujetos a validación.",
+"verificacion": "",
 "asesoria": "Estamos atentos a sus consultas y a coordinar visitas con verdaderos interesados.",
 "fotos": [
 "03c8e846ec767888b5a63fed48c27278"
@@ -483,7 +494,7 @@ footer{padding-block:26px 30px;color:var(--muted);font-size:13px;border-top:1px 
 ]
 ],
 "descripcion": "Cargador frontal articulado para alimentación de planta, carguío de camiones y manejo de acopios. Hay una segunda unidad (LGC-EQ-005).",
-"verificacion": "Año y horómetro informados por el vendedor; fotos reales de la unidad (octubre 2026). Sujeto a inspección.",
+"verificacion": "",
 "asesoria": "Estamos atentos a sus consultas y a coordinar visitas con verdaderos interesados.",
 "fotos": [
   "6915729f0926cbae72482eecab0b2461",
@@ -524,7 +535,7 @@ footer{padding-block:26px 30px;color:var(--muted);font-size:13px;border-top:1px 
 ]
 ],
 "descripcion": "Cargador frontal articulado para alimentación de planta, carguío de camiones y manejo de acopios.",
-"verificacion": "Año y horómetro informados por el vendedor; fotos reales de la unidad (octubre 2026). Sujeto a inspección.",
+"verificacion": "",
 "asesoria": "Estamos atentos a sus consultas y a coordinar visitas con verdaderos interesados.",
 "fotos": [
   "5edc2fb2bda13622d96ba834474eba31",
@@ -561,7 +572,7 @@ footer{padding-block:26px 30px;color:var(--muted);font-size:13px;border-top:1px 
 "estandar": [],
 "extras": [],
 "descripcion": "Cargador frontal compacto con bajo uso (1.896 h).",
-"verificacion": "Año y horómetro informados por el vendedor; datos técnicos referenciales.",
+"verificacion": "",
 "asesoria": "Estamos atentos a sus consultas y a coordinar visitas con verdaderos interesados.",
 "fotos": [
 "fa9ea25b02400a18c7f381b90a9706fc",
@@ -604,7 +615,7 @@ footer{padding-block:26px 30px;color:var(--muted);font-size:13px;border-top:1px 
 ]
 ],
 "descripcion": "Circuito de reducción y clasificación de roca y grava para producir áridos chancados y bases. Se vende como conjunto con su generador de 340 kVA y la sala eléctrica en contenedor.",
-"verificacion": "Horómetro (400 h) y año informados por el vendedor. El generador y la sala eléctrica no tienen precio independiente.",
+"verificacion": "",
 "asesoria": "Estamos atentos a sus consultas y a coordinar visitas con verdaderos interesados.",
 "fotos": [
 "ddf6624b40538d31c569627b000dc8ee",
@@ -640,7 +651,7 @@ footer{padding-block:26px 30px;color:var(--muted);font-size:13px;border-top:1px 
 "estandar": [],
 "extras": [],
 "descripcion": "Seleccionadora móvil de doble harnero para clasificación de áridos.",
-"verificacion": "Año y horómetro informados por el vendedor.",
+"verificacion": "",
 "asesoria": "Estamos atentos a sus consultas y a coordinar visitas con verdaderos interesados.",
 "fotos": [
 "feecb71c240700163038130afc651a30"
@@ -706,7 +717,7 @@ footer{padding-block:26px 30px;color:var(--muted);font-size:13px;border-top:1px 
 ]
 ],
 "descripcion": "Camión 6×4 con grúa hidráulica articulada, para transporte, descarga y posicionamiento de prefabricados, cámaras y barreras. Camión y grúa se venden como una sola unidad.",
-"verificacion": "Kilometraje, horómetro y ficha técnica según documentación del vendedor. Las capacidades de la grúa varían según radio y configuración: verificar el diagrama de carga.",
+"verificacion": "",
 "asesoria": "Estamos atentos a sus consultas y a coordinar visitas con verdaderos interesados.",
 "fotos": [
 "f9b6341f2d605e22bbf57e18121ede3f",
@@ -745,7 +756,7 @@ footer{padding-block:26px 30px;color:var(--muted);font-size:13px;border-top:1px 
 "estandar": [],
 "extras": [],
 "descripcion": "Camión tolva para transporte de áridos a granel.",
-"verificacion": "Año y kilometraje informados por el vendedor.",
+"verificacion": "",
 "asesoria": "Estamos atentos a sus consultas y a coordinar visitas con verdaderos interesados.",
 "fotos": [
 "fee2fd2b005ff5cfbff976592fba6913"
@@ -783,7 +794,7 @@ footer{padding-block:26px 30px;color:var(--muted);font-size:13px;border-top:1px 
 ]
 ],
 "descripcion": "Excavadora sobre orugas de 33 toneladas, modelo 2026, para excavación masiva, zanjas profundas y carguío.",
-"verificacion": "Datos informados por el propietario (tabla de flota, octubre 2026); sujetos a confirmación al cotizar.",
+"verificacion": "",
 "asesoria": "Estamos atentos a sus consultas y a coordinar visitas con verdaderos interesados.",
 "fotos": [
 "3b44511f8199e8303b1fc05f4398b060",
@@ -822,7 +833,7 @@ footer{padding-block:26px 30px;color:var(--muted);font-size:13px;border-top:1px 
 ]
 ],
 "descripcion": "Grúa horquilla diésel de 5 toneladas con cabina cerrada, para patios de carga, bodegas y faena.",
-"verificacion": "Datos informados por el propietario (tabla de flota, octubre 2026); sujetos a confirmación al cotizar. Fotos referenciales del modelo Heli; confirmar unidad al cotizar.",
+"verificacion": "",
 "asesoria": "Estamos atentos a sus consultas y a coordinar visitas con verdaderos interesados.",
 "fotos": [
 "42ec6f2da7aba190f53c1ea4d8c931ba",
@@ -861,7 +872,7 @@ footer{padding-block:26px 30px;color:var(--muted);font-size:13px;border-top:1px 
 ]
 ],
 "descripcion": "Grúa horquilla diésel de alto tonelaje con cabina cerrada, para manejo de cargas pesadas.",
-"verificacion": "Datos informados por el propietario (tabla de flota, octubre 2026); sujetos a confirmación al cotizar. Fotos referenciales del modelo Heli; confirmar unidad y capacidad al cotizar.",
+"verificacion": "",
 "asesoria": "Estamos atentos a sus consultas y a coordinar visitas con verdaderos interesados.",
 "fotos": [
 "37e7e911a312614fcb9bf6ca7819ea33",
@@ -901,7 +912,7 @@ footer{padding-block:26px 30px;color:var(--muted);font-size:13px;border-top:1px 
 ]
 ],
 "descripcion": "Camión pluma para izaje, carga y descarga de materiales en faena.",
-"verificacion": "Datos informados por el propietario (tabla de flota, octubre 2026); sujetos a confirmación al cotizar.",
+"verificacion": "",
 "asesoria": "Estamos atentos a sus consultas y a coordinar visitas con verdaderos interesados.",
 "fotos": []
 },
@@ -937,7 +948,7 @@ footer{padding-block:26px 30px;color:var(--muted);font-size:13px;border-top:1px 
 ]
 ],
 "descripcion": "Camión pluma con transmisión automática, para izaje y transporte de materiales.",
-"verificacion": "Datos informados por el propietario (tabla de flota, octubre 2026); sujetos a confirmación al cotizar.",
+"verificacion": "",
 "asesoria": "Estamos atentos a sus consultas y a coordinar visitas con verdaderos interesados.",
 "fotos": []
 },
@@ -973,7 +984,7 @@ footer{padding-block:26px 30px;color:var(--muted);font-size:13px;border-top:1px 
 ]
 ],
 "descripcion": "Excavadora de 20 toneladas equipada con martillo hidráulico, para demolición, roca y fracturación.",
-"verificacion": "Datos informados por el propietario (tabla de flota, octubre 2026); sujetos a confirmación al cotizar.",
+"verificacion": "",
 "asesoria": "Estamos atentos a sus consultas y a coordinar visitas con verdaderos interesados.",
 "fotos": []
 },
@@ -1013,7 +1024,7 @@ footer{padding-block:26px 30px;color:var(--muted);font-size:13px;border-top:1px 
 ]
 ],
 "descripcion": "Retroexcavadora 4x4 para zanjas, carguío, limpieza y obras civiles. Equipada con extintor y pértiga.",
-"verificacion": "Datos informados por el propietario (tabla de flota, octubre 2026); sujetos a confirmación al cotizar.",
+"verificacion": "",
 "asesoria": "Estamos atentos a sus consultas y a coordinar visitas con verdaderos interesados.",
 "fotos": [
 "7f746dd39567bf2aadd032958a4d263e",
@@ -1056,7 +1067,7 @@ footer{padding-block:26px 30px;color:var(--muted);font-size:13px;border-top:1px 
 ]
 ],
 "descripcion": "Martillo hidráulico para retroexcavadoras, adaptado especialmente para la retroexcavadora JCB 3CX (LGC-EQ-017).",
-"verificacion": "Datos informados por el propietario (tabla de flota, octubre 2026); sujetos a confirmación al cotizar.",
+"verificacion": "",
 "asesoria": "Estamos atentos a sus consultas y a coordinar visitas con verdaderos interesados.",
 "fotos": []
 },
@@ -1092,7 +1103,7 @@ footer{padding-block:26px 30px;color:var(--muted);font-size:13px;border-top:1px 
 ]
 ],
 "descripcion": "Martillo hidráulico JCB para montar en retroexcavadora.",
-"verificacion": "Datos informados por el propietario (tabla de flota, octubre 2026); sujetos a confirmación al cotizar.",
+"verificacion": "",
 "asesoria": "Estamos atentos a sus consultas y a coordinar visitas con verdaderos interesados.",
 "fotos": []
 }
@@ -1235,12 +1246,15 @@ function bind() {
   ["venta", "arriendo"].forEach(k => { const i = $("#q-" + k); if (i) i.addEventListener("input", () => { ui[k].q = i.value; renderGrid(k); }); const g = $("#grid-" + k); if (g) g.addEventListener("click", ev => { const c = ev.target.closest("[data-open]"); if (c) openFicha(c.dataset.open, c.dataset.mode); }); });
   document.querySelectorAll("[data-pedir]").forEach(b => b.addEventListener("click", () => irContacto(b.dataset.pedir, "")));
   if ($("#f-cotizar")) $("#f-cotizar").addEventListener("click", () => irContacto("Apoyo para financiar una compra", ""));
-  $("#c-form").addEventListener("submit", enviarConsulta);
+  $("#c-form").addEventListener("submit", ev => ev.preventDefault());
+  if ($("#c-enviar-wa")) $("#c-enviar-wa").addEventListener("click", ev => prepararEnvio(ev, "wa"));
+  $("#c-enviar-mail").addEventListener("click", ev => prepararEnvio(ev, "mail"));
+  document.querySelectorAll('input[name="c-eq"]').forEach(x => x.addEventListener("change", resumenEquipos));
   $("#c-copy-mail").addEventListener("click", () => copyText(state.config.correo, $("#c-mail")));
   $("#dlg").addEventListener("click", ev => { if (ev.target === ev.currentTarget) ev.currentTarget.close(); });
 }
 function irContacto(interes, equipo, mensaje) {
-  $("#c-interes").value = interes; if (equipo !== undefined) $("#c-equipo").value = equipo; if (mensaje) $("#c-mensaje").value = mensaje;
+  $("#c-interes").value = interes; if (equipo) marcarEquipo(equipo); if (mensaje) $("#c-mensaje").value = mensaje;
   $("#contacto").scrollIntoView({ behavior: "smooth" }); setTimeout(() => $("#c-nombre").focus({ preventScroll: true }), 450);
 }
 
@@ -1261,7 +1275,6 @@ function openFicha(id, mode) {
         ${fotos.length > 1 ? `<div class="thumbs">${fotos.map((f, i) => `<button type="button" data-ph="${esc(f)}" aria-current="${i === 0}" aria-label="Foto ${i + 1} de ${fotos.length}"><img src="${photoUrl(f)}" alt=""></button>`).join("")}</div>` : ""}
         ${e.descripcion ? `<p class="desc">${esc(e.descripcion)}</p>` : ""}
         ${e.estandar && e.estandar.length ? `<div style="margin-top:12px"><span class="label">Estándar minero</span><ul class="checks">${e.estandar.map(s => `<li>${esc(s)}</li>`).join("")}</ul></div>` : ""}
-        ${e.verificacion ? `<p class="verif">${esc(e.verificacion)}</p>` : ""}
       </div>
       <div>
         <div class="plate"><div class="plate-t">Ficha técnica</div><dl class="spec">${spec.map(([k, v]) => `<dt>${esc(k)}</dt><dd>${esc(v)}</dd>`).join("")}</dl></div>
@@ -1321,7 +1334,7 @@ function financiamientoHTML() {
 function contactoHTML() {
   const c = state.config;
   return `<section class="wrap section" id="contacto">
-    <div class="sec-head"><div><span class="kicker">Contacto</span><h2>Solicite una cotización</h2></div><span class="label">Respondemos en un día hábil</span></div>
+    <div class="sec-head"><div><span class="kicker">Contacto</span><h2>Solicite una cotización</h2></div></div>
     <div class="contact">
       <form class="panel form" id="c-form" novalidate>
         <div class="field"><label for="c-nombre">Nombre</label><input id="c-nombre" required autocomplete="name"></div>
@@ -1330,45 +1343,61 @@ function contactoHTML() {
         <div class="field"><label for="c-fono">Teléfono</label><input id="c-fono" type="tel" autocomplete="tel"></div>
         <div class="field"><label for="c-interes">Necesito</label><select id="c-interes">${INTERESES.filter(x => FIN || !/financ/i.test(x)).map(x => `<option>${x}</option>`).join("")}</select></div>
         <div class="field"><label for="c-ciudad">Ciudad de la faena</label><input id="c-ciudad" list="dl-ciudades"><datalist id="dl-ciudades">${CIUDADES.map(x => `<option>${x}</option>`).join("")}</datalist></div>
-        <div class="field full"><label for="c-equipo">Equipo de interés</label><input id="c-equipo" placeholder="Ej.: excavadora de 20 t, o el código del catálogo"></div>
+        <div class="field full"><span class="flabel" id="c-equipos-l">Equipos de interés <small>(puede elegir más de uno)</small></span>${selectorEquipos()}</div>
         <div class="field full"><label for="c-mensaje">Detalle</label><textarea id="c-mensaje" placeholder="Plazo, fecha de inicio, faena, presupuesto…"></textarea></div>
-        <div class="full" style="display:flex;gap:10px;align-items:center;flex-wrap:wrap"><button class="btn venta" type="submit">Enviar solicitud</button><span class="note" id="c-status" style="margin:0"></span></div>
-        <div class="full" id="c-fallback" hidden></div>
+        <div class="full" style="display:flex;gap:10px;align-items:center;flex-wrap:wrap">
+          ${c.whatsapp ? `<a class="btn wa" id="c-enviar-wa" href="${esc(waUrl(c.whatsapp))}" target="_blank" rel="noopener">Enviar por WhatsApp</a>` : ""}
+          <a class="btn venta" id="c-enviar-mail" href="mailto:${esc(c.correo)}" target="_blank" rel="noopener">Enviar por correo</a>
+          <span class="note" id="c-status" style="margin:0"></span></div>
       </form>
       <div class="panel">
         <span class="label">Correo</span>
         <div style="display:flex;align-items:center;flex-wrap:wrap;gap:4px;margin:4px 0 12px"><span class="addr" id="c-mail">${esc(c.correo)}</span><button class="copy" type="button" id="c-copy-mail">Copiar</button></div>
         ${c.telefono ? `<span class="label">Teléfono</span><div class="addr" style="margin:4px 0 12px">${esc(c.telefono)}</div>` : ""}
         ${c.whatsapp ? `<span class="label">WhatsApp</span><div style="margin:4px 0 12px"><a class="btn wa" href="${esc(waUrl(c.whatsapp, "Hola LGC Asesorías Zona Norte, quiero consultar por equipos."))}" target="_blank" rel="noopener">WhatsApp ${esc(c.whatsapp)}</a></div>` : ""}
-        ${c.horario ? `<span class="label">Horario</span><div style="margin:4px 0 12px">${esc(c.horario)}</div>` : ""}
-        ${c.zona ? `<span class="label">Cobertura</span><div style="margin-top:4px">${esc(c.zona)}</div>` : ""}
       </div>
     </div>
   </section>`;
 }
-function textoConsulta(v) {
-  return `Hola LGC Asesorías,\n\n${v.interes}${v.equipo ? ": " + v.equipo : ""}.\n${v.ciudad ? "Ciudad de la faena: " + v.ciudad + "\n" : ""}${v.mensaje ? "\n" + v.mensaje + "\n" : ""}\n${v.nombre}${v.empresa ? " · " + v.empresa : ""}\n${v.correo}${v.fono ? " · " + v.fono : ""}`;
+/* Selector desplegable con todos los equipos disponibles; se pueden marcar varios */
+const disponible = e => e.estado === "Disponible" || e.estado === "Reservado";
+const refEquipo = e => `${e.codigo} · ${e.tipo} ${nombre(e)}`;
+function selectorEquipos() {
+  const disp = state.equipos.filter(disponible);
+  const grupo = (t, l) => l.length ? `<div class="mg"><span class="label">${t}</span>${l.map(e => `<label><input type="checkbox" name="c-eq" value="${esc(refEquipo(e))}" data-cod="${esc(e.codigo)}"><span><span class="mono">${esc(e.codigo)}</span> · ${esc(e.tipo)} ${esc(nombre(e))}</span></label>`).join("")}</div>` : "";
+  return `<details class="multi" id="c-equipos"><summary id="c-equipos-s">Seleccione uno o más equipos</summary>
+    <div class="multi-list" role="group" aria-labelledby="c-equipos-l">
+      ${grupo("Venta", disp.filter(enVenta))}${grupo("Arriendo", disp.filter(e => enArriendo(e) && !enVenta(e)))}
+      <div class="mg"><label><input type="checkbox" name="c-eq" value="Otro equipo (detallado abajo)"><span>Otro equipo (indíquelo en el detalle)</span></label></div>
+    </div></details>`;
 }
-async function enviarConsulta(ev) {
-  ev.preventDefault();
-  const v = { nombre: $("#c-nombre").value.trim(), empresa: $("#c-empresa").value.trim(), correo: $("#c-correo").value.trim(), fono: $("#c-fono").value.trim(),
-    interes: $("#c-interes").value, ciudad: $("#c-ciudad").value.trim(), equipo: $("#c-equipo").value.trim(), mensaje: $("#c-mensaje").value.trim() };
-  const st = $("#c-status");
-  if (!v.nombre || !/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(v.correo)) { st.textContent = "Indique su nombre y un correo válido."; return; }
-  let ok = false;
-  if (ui.db && ui.uid) {
-    try {
-      const ref = ui.db.doc("consultas/" + ui.uid), snap = await ref.get();
-      const items = snap.exists ? (snap.data().items || []).slice(-49) : [];
-      items.push(Object.assign({ fecha: new Date().toISOString() }, v)); await ref.set({ items }); ok = true;
-    } catch (e) { ok = false; }
-  }
-  const fb = $("#c-fallback");
-  if (ok) { st.textContent = "Solicitud enviada. Le contactaremos pronto."; fb.hidden = true; ev.target.reset(); return; }
-  st.textContent = ""; fb.hidden = false;
-  fb.innerHTML = `<div class="advice" style="margin:0"><span class="label">Último paso</span><div>Envíe su solicitud por WhatsApp o por correo; el mensaje ya va escrito.</div><div class="actions" style="margin-top:8px"><a class="btn wa" id="c-wa" target="_blank" rel="noopener">Enviar por WhatsApp</a><a class="btn" id="c-mailto">Enviar por correo</a></div><div class="msgbox" id="c-txt"></div><button class="btn" type="button" id="c-copy" style="margin-top:8px">Copiar mensaje</button></div>`;
-  const txt = textoConsulta(v); $("#c-txt").textContent = txt; $("#c-wa").href = waUrl(state.config.whatsapp, txt); $("#c-mailto").href = "mailto:" + state.config.correo + "?subject=" + encodeURIComponent("Solicitud de cotización · " + v.interes) + "&body=" + encodeURIComponent(txt);
-  $("#c-copy").addEventListener("click", () => copyText(`Para: ${state.config.correo}\nAsunto: Solicitud de cotización · ${v.interes}\n\n${txt}`, $("#c-txt")));
+function resumenEquipos() {
+  const n = document.querySelectorAll('input[name="c-eq"]:checked').length;
+  $("#c-equipos-s").textContent = n === 0 ? "Seleccione uno o más equipos" : n === 1 ? "1 equipo seleccionado" : n + " equipos seleccionados";
+}
+function marcarEquipo(ref) {
+  const m = /LGC-EQ-\d+/.exec(ref || ""); if (!m) return;
+  const cb = document.querySelector(`input[name="c-eq"][data-cod="${m[0]}"]`); if (cb) cb.checked = true;
+  resumenEquipos();
+}
+function leerConsulta() {
+  return { nombre: $("#c-nombre").value.trim(), empresa: $("#c-empresa").value.trim(), correo: $("#c-correo").value.trim(), fono: $("#c-fono").value.trim(),
+    interes: $("#c-interes").value, ciudad: $("#c-ciudad").value.trim(), mensaje: $("#c-mensaje").value.trim(),
+    equipos: [...document.querySelectorAll('input[name="c-eq"]:checked')].map(x => x.value) };
+}
+function textoConsulta(v) {
+  const eq = v.equipos.length === 0 ? "." : v.equipos.length === 1 ? ": " + v.equipos[0] + "." : ":\n" + v.equipos.map(x => "- " + x).join("\n");
+  const firma = [v.nombre + (v.empresa ? " · " + v.empresa : ""), [v.correo, v.fono].filter(Boolean).join(" · ")].filter(Boolean).join("\n");
+  return `Hola LGC Asesorías,\n\n${v.interes}${eq}\n${v.ciudad ? "Ciudad de la faena: " + v.ciudad + "\n" : ""}${v.mensaje ? "\n" + v.mensaje + "\n" : ""}\n${firma}`;
+}
+/* Al presionar el botón se arma el mensaje y se abre WhatsApp o el correo con todo escrito */
+function prepararEnvio(ev, canal) {
+  const v = leerConsulta(), st = $("#c-status"), a = ev.currentTarget;
+  if (!v.nombre) { ev.preventDefault(); st.textContent = "Indique su nombre para enviar la solicitud."; $("#c-nombre").focus(); return; }
+  st.textContent = "";
+  const txt = textoConsulta(v), c = state.config;
+  a.href = canal === "wa" ? waUrl(c.whatsapp, txt)
+    : "mailto:" + c.correo + "?subject=" + encodeURIComponent("Solicitud de cotización · " + v.interes) + "&body=" + encodeURIComponent(txt);
 }
 
 /* ---------- gestión ---------- */
@@ -1462,7 +1491,7 @@ function openEditor(id) {
     <div class="field full"><label for="ed-extras">Otras especificaciones (una por línea, "Etiqueta: valor")</label><textarea id="ed-extras">${esc((e.extras || []).map(([k, v]) => k + ": " + v).join("\n"))}</textarea></div>
     <div class="field full"><label>Estándar minero</label><div class="chk-grid">${ESTANDAR.map((s, i) => `<label><input type="checkbox" id="ed-std-${i}" ${e.estandar.includes(s) ? "checked" : ""}>${esc(s)}</label>`).join("")}</div></div>
     <div class="field full"><label for="ed-descripcion">Descripción</label><textarea id="ed-descripcion">${esc(e.descripcion)}</textarea></div>
-    <div class="field full"><label for="ed-verificacion">Nota de verificación (origen de los datos)</label><textarea id="ed-verificacion">${esc(e.verificacion)}</textarea></div>
+    <div class="field full"><label for="ed-verificacion">Nota interna (no se muestra en la página)</label><textarea id="ed-verificacion">${esc(e.verificacion)}</textarea></div>
     <div class="field full"><label for="ed-asesoria">Comentario de asesoría</label><textarea id="ed-asesoria">${esc(e.asesoria)}</textarea></div>
     <div class="field full"><label for="ed-file">Fotos (JPG, PNG o WEBP; la primera es la portada)</label>
       ${ui.assets ? `<input id="ed-file" type="file" accept="image/jpeg,image/png,image/webp" multiple>` : `<p class="note" style="margin:0">La carga de fotos no está disponible en esta vista.</p>`}
