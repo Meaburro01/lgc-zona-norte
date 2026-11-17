@@ -162,8 +162,6 @@ dialog::backdrop{background:rgba(6,16,18,.6)}
 .actions{display:flex;flex-wrap:wrap;gap:8px;margin-top:14px}
 .btn{border:1px solid var(--ink);background:var(--ink);color:var(--bg);border-radius:var(--r);padding:10px 15px;font-weight:600;cursor:pointer;font-size:14px}
 .btn.wa{background:#1d7a46;border-color:#1d7a46;color:#fff;text-decoration:none;display:inline-block}
-.wa-float{position:fixed;right:16px;bottom:16px;z-index:20;background:#1d7a46;color:#fff;font-weight:700;font-size:14px;padding:11px 16px;border-radius:999px;text-decoration:none;box-shadow:0 4px 14px rgba(0,0,0,.25)}
-@media print{.wa-float{display:none}}
 .btn.venta{background:var(--venta);border-color:var(--venta);color:var(--venta-ink)}
 .btn.arr{background:var(--arriendo);border-color:var(--arriendo);color:var(--arriendo-ink)}
 .btn.fin{background:transparent;border-color:var(--fin);color:var(--fin)}
@@ -1191,7 +1189,6 @@ function render() {
   ${contactoHTML()}
   ${ui.canEdit ? `<section class="wrap section" id="gestion"><div id="admin"></div></section>` : ""}
   </main>
-  ${c.whatsapp ? `<a class="wa-float" href="${esc(waUrl(c.whatsapp, "Hola LGC Asesorías Zona Norte, quiero consultar por equipos."))}" target="_blank" rel="noopener" aria-label="Escribir por WhatsApp">WhatsApp</a>` : ""}
   <footer><div class="wrap">LGC Asesorías · Asesoría en venta${FIN ? ", arriendo y financiamiento" : " y arriendo"} de vehículos y maquinaria · <span class="mono">${esc(c.correo)}</span>${c.whatsapp ? ` · WhatsApp <a class="mono" href="${esc(waUrl(c.whatsapp))}" target="_blank" rel="noopener">${esc(c.whatsapp)}</a>` : ""}<br>Datos técnicos, horómetros y precios informados por los propietarios de cada equipo; sujetos a inspección y confirmación.</div></footer>
   <dialog id="dlg" aria-labelledby="dlg-t"></dialog>`;
   bind();
@@ -1224,7 +1221,7 @@ function renderGrid(key) {
     const fotos = e.fotos || [];
     const precio = key === "venta" ? (e.ventaValor ? `<strong>${clp(e.ventaValor)}</strong><small>${esc(e.iva || "+ IVA")}</small>` : `<strong>A cotizar</strong>`)
       : (e.arriendoValor ? `<strong>${clp(e.arriendoValor)}</strong><small>/ ${esc(e.arriendoUnidad || "mes")} + IVA</small>` : `<strong>A cotizar</strong>`);
-    return `<button type="button" class="card" data-open="${esc(e.id)}" data-mode="${key}" aria-label="Ver ficha de ${esc(e.tipo + " " + nombre(e))}">
+    return `<button type="button" class="card" data-open="${esc(e.id)}" data-cod="${esc(e.codigo || "")}" data-mode="${key}" aria-label="Ver ficha de ${esc(e.tipo + " " + nombre(e))}">
       <div class="ph">${fotos.length ? `<img src="${photoUrl(fotos[0])}" alt="" loading="lazy" data-tipo="${esc(e.tipo)}">` : silhouette(e.tipo)}
         <div class="tags">${key === "venta" ? `<span class="pill ven">Venta</span>` : `<span class="pill arr">Arriendo</span>`}${e.modalidad === "Arriendo y venta" ? `<span class="pill">${key === "venta" ? "También en arriendo" : "También en venta"}</span>` : ""}</div>
         ${fotos.length > 1 ? `<span class="nfot">${fotos.length} fotos</span>` : ""}</div>
@@ -1285,7 +1282,7 @@ function openFicha(id, mode) {
           ${enVenta(e) ? `<button class="btn venta" type="button" data-q="Comprar un equipo">Quiero comprarlo</button>` : ""}
           ${enArriendo(e) ? `<button class="btn arr" type="button" data-q="Arrendar un equipo">Quiero arrendarlo</button>` : ""}
           ${enVenta(e) && FIN ? `<button class="btn fin" type="button" data-q="Apoyo para financiar una compra">Consultar financiamiento</button>` : ""}
-          ${state.config.whatsapp ? `<a class="btn wa" href="${esc(waUrl(state.config.whatsapp, "Hola LGC Asesorías Zona Norte, me interesa el equipo " + (e.codigo || "") + " · " + e.tipo + " " + nombre(e) + "."))}" target="_blank" rel="noopener">Consultar por WhatsApp</a>` : ""}
+          ${state.config.whatsapp ? `<a class="btn wa" href="${esc(waUrl(state.config.whatsapp, "Hola LGC Asesorías Zona Norte, me interesa el equipo " + (e.codigo || "") + " · " + e.tipo + " " + nombre(e) + "."))}" data-evento="ficha-whatsapp-${esc(e.codigo || "")}" target="_blank" rel="noopener">Consultar por WhatsApp</a>` : ""}
         </div>
       </div>
     </div>`;
@@ -1341,13 +1338,12 @@ function contactoHTML() {
         <div class="field"><label for="c-empresa">Empresa</label><input id="c-empresa" autocomplete="organization"></div>
         <div class="field"><label for="c-correo">Correo</label><input id="c-correo" type="email" required autocomplete="email"></div>
         <div class="field"><label for="c-fono">Teléfono</label><input id="c-fono" type="tel" autocomplete="tel"></div>
-        <div class="field"><label for="c-interes">Necesito</label><select id="c-interes">${INTERESES.filter(x => FIN || !/financ/i.test(x)).map(x => `<option>${x}</option>`).join("")}</select></div>
-        <div class="field"><label for="c-ciudad">Ciudad de la faena</label><input id="c-ciudad" list="dl-ciudades"><datalist id="dl-ciudades">${CIUDADES.map(x => `<option>${x}</option>`).join("")}</datalist></div>
+        <div class="field full"><label for="c-interes">Necesito</label><select id="c-interes">${INTERESES.filter(x => FIN || !/financ/i.test(x)).map(x => `<option>${x}</option>`).join("")}</select></div>
         <div class="field full"><span class="flabel" id="c-equipos-l">Equipos de interés <small>(puede elegir más de uno)</small></span>${selectorEquipos()}</div>
         <div class="field full"><label for="c-mensaje">Detalle</label><textarea id="c-mensaje" placeholder="Plazo, fecha de inicio, faena, presupuesto…"></textarea></div>
         <div class="full" style="display:flex;gap:10px;align-items:center;flex-wrap:wrap">
-          ${c.whatsapp ? `<a class="btn wa" id="c-enviar-wa" href="${esc(waUrl(c.whatsapp))}" target="_blank" rel="noopener">Enviar por WhatsApp</a>` : ""}
-          <a class="btn venta" id="c-enviar-mail" href="mailto:${esc(c.correo)}" target="_blank" rel="noopener">Enviar por correo</a>
+          ${c.whatsapp ? `<a class="btn wa" id="c-enviar-wa" data-evento="formulario-whatsapp" href="${esc(waUrl(c.whatsapp))}" target="_blank" rel="noopener">Enviar por WhatsApp</a>` : ""}
+          <a class="btn venta" id="c-enviar-mail" data-evento="formulario-correo" href="mailto:${esc(c.correo)}" target="_blank" rel="noopener">Enviar por correo</a>
           <span class="note" id="c-status" style="margin:0"></span></div>
       </form>
       <div class="panel">
@@ -1382,13 +1378,13 @@ function marcarEquipo(ref) {
 }
 function leerConsulta() {
   return { nombre: $("#c-nombre").value.trim(), empresa: $("#c-empresa").value.trim(), correo: $("#c-correo").value.trim(), fono: $("#c-fono").value.trim(),
-    interes: $("#c-interes").value, ciudad: $("#c-ciudad").value.trim(), mensaje: $("#c-mensaje").value.trim(),
+    interes: $("#c-interes").value, mensaje: $("#c-mensaje").value.trim(),
     equipos: [...document.querySelectorAll('input[name="c-eq"]:checked')].map(x => x.value) };
 }
 function textoConsulta(v) {
   const eq = v.equipos.length === 0 ? "." : v.equipos.length === 1 ? ": " + v.equipos[0] + "." : ":\n" + v.equipos.map(x => "- " + x).join("\n");
   const firma = [v.nombre + (v.empresa ? " · " + v.empresa : ""), [v.correo, v.fono].filter(Boolean).join(" · ")].filter(Boolean).join("\n");
-  return `Hola LGC Asesorías,\n\n${v.interes}${eq}\n${v.ciudad ? "Ciudad de la faena: " + v.ciudad + "\n" : ""}${v.mensaje ? "\n" + v.mensaje + "\n" : ""}\n${firma}`;
+  return `Hola LGC Asesorías,\n\n${v.interes}${eq}\n${v.mensaje ? "\n" + v.mensaje + "\n" : ""}\n${firma}`;
 }
 /* Al presionar el botón se arma el mensaje y se abre WhatsApp o el correo con todo escrito */
 function prepararEnvio(ev, canal) {
@@ -1476,7 +1472,7 @@ function openEditor(id) {
     ${inp("anio", "Año", "number", 'min="1980" max="2035"')}
     <div class="field"><label for="ed-modalidad">Línea</label><select id="ed-modalidad">${opt(MODALIDADES, e.modalidad)}</select></div>
     <div class="field"><label for="ed-estado">Estado</label><select id="ed-estado">${opt(ESTADOS, e.estado)}</select></div>
-    <div class="field"><label for="ed-ubicacion">Ubicación</label><input id="ed-ubicacion" list="dl-ciudades" value="${esc(e.ubicacion)}"></div>
+    <div class="field"><label for="ed-ubicacion">Ubicación</label><input id="ed-ubicacion" list="dl-ciudades" value="${esc(e.ubicacion)}"><datalist id="dl-ciudades">${CIUDADES.map(x => `<option>${x}</option>`).join("")}</datalist></div>
     ${inp("horometro", "Horómetro (h)", "number", 'min="0" step="0.1"')}${inp("kilometraje", "Kilometraje (km)", "number", 'min="0"')}
     ${inp("patente", "Patente")}${inp("serie", "N.º de serie")}
     ${inp("potencia", "Potencia / motor")}${inp("peso", "Peso operativo")}
